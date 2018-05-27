@@ -10,6 +10,7 @@ namespace GestaoHorarios.classes.estrutura
     {
         private Vertice vertice1;
         private Vertice vertice2;
+        private IDado cor; //?
 
         public Vertice VerticePrimeiro { get { return this.vertice1; } }
         public Vertice VerticeSegundo { get { return this.vertice2; } }
