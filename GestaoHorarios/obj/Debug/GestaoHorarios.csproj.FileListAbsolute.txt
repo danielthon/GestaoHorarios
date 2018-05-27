@@ -1,3 +1,4 @@
 c:\users\1019044\documents\visual studio 2015\Projects\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
 C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
 D:\Projetos\C#\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
