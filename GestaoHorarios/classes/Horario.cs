@@ -6,19 +6,19 @@ namespace GestaoHorarios.classes
 {
     public enum DiaSemana
     {
+        Domingo,
         Segunda,
         Terca,
         Quarta,
         Quinta,
         Sexta,
-        Sabado,
-        Domingo
+        Sabado      
     }
 
     public enum Hora
     {
-        _19h00,
-        _20h50
+        _19h00 = 1,
+        _20h50 = 2
     }
 
     class Horario : IDado
