@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GestaoHorarios.classes;
+using DAL;
+using DAL.MySQL;
 
-namespace GestaoHorarios.classes.DAL
+namespace DAL.Tables
 {
-    class TableHorario
+    public class TableHorario
     {
         static string tabela = "horario";
 

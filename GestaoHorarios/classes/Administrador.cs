@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GestaoHorarios.classes
 {
-    class Administrador : Usuario
+    public class Administrador : Usuario
     {
         int id_admin;
 

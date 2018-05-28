@@ -4,7 +4,7 @@ using GestaoHorarios.classes.estrutura;
 
 namespace GestaoHorarios.classes
 {
-    class Disciplina : IDado
+    public class Disciplina : IDado
     {
         private int id;
         private string nome;

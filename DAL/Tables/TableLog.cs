@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Data;
+using GestaoHorarios.classes;
+using DAL;
+using DAL.MySQL;
 
-namespace GestaoHorarios.classes.DAL
+namespace DAL.Tables
 {
-    class TableLog
+    public class TableLog
     {
         static string tabela = "log";
 

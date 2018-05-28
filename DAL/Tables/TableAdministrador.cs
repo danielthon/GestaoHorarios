@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Data;
+using GestaoHorarios.classes;
+using DAL;
+using DAL.MySQL;
 
-namespace GestaoHorarios.classes.DAL
+namespace DAL.Tables
 {
-    class TableUsuario
+    public static class TableAdministrador
     {
-        static string tabela = "usuario";
+        static string tabela = "administrador";
 
         static string[] campos =
         {
-            "Nome",
-            "Login",
-            "Senha"
+            "Id_Usuario"
         };
 
-        public static void Inserir(Usuario usuario)
+        public static void Inserir(Administrador admin)
         {
             string[] values =
             {
-                usuario.Nome,
-                usuario.Login,
-                usuario.Senha
+                admin.ID_Usuario
             };
 
+            TableUsuario.Inserir(admin);
             ExecutorComandos.Insert(tabela, values);
 
             //usuario.ID = ?
@@ -45,20 +45,16 @@ namespace GestaoHorarios.classes.DAL
 
         public static void Alterar(Usuario usuario)
         {
-            string[] values =
-            {
-                usuario.Nome,
-                usuario.Login,
-                usuario.Senha
-            };
-
-            ExecutorComandos.Update(tabela, campos, values, usuario.ID);
+            //verificar se o Id_Usuario alterou
         }
 
-        public static void Excluir(Usuario usuario)
+        public static void Excluir(Administrador admin)
         {
-            ExecutorComandos.Delete(tabela, usuario.ID);
-            usuario = null;
+            ExecutorComandos.Delete(tabela, admin.ID);
+
+            TableUsuario.Excluir(admin);
+
+            admin = null;
         }
     }
 }

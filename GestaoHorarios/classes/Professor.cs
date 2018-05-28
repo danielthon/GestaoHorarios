@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GestaoHorarios.classes
 {
-    class Professor : Usuario
+    public class Professor : Usuario
     {
         int id_prof;
 

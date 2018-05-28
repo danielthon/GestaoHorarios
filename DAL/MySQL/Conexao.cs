@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace GestaoHorarios.classes.DAL.MySQL
+namespace DAL.MySQL
 {
-    static class Conexao
+    internal static class Conexao
     {
         static private MySqlConnection conn;
 

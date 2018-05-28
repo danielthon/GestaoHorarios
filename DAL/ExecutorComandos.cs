@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Text;
 using System.Data;
-using GestaoHorarios.classes.DAL.MySQL;
+using DAL.MySQL;
 
-namespace GestaoHorarios.classes.DAL
+namespace DAL
 {
-    class ExecutorComandos
+    internal class ExecutorComandos
     {
         internal static void Insert(string tabela, string[] values)
         {

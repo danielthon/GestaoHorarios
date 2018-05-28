@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Data;
+using GestaoHorarios.classes;
+using DAL;
+using DAL.MySQL;
 
-namespace GestaoHorarios.classes.DAL
+namespace DAL.Tables
 {
-    class TableAlocacao
+    public class TableAlocacao
     {
         static string tabela = "alocacao";
 

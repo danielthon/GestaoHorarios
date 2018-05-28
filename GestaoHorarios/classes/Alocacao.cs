@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestaoHorarios.classes
 {
-    class Alocacao
+    public class Alocacao
     {
         private int id;
         private Disciplina disciplina;

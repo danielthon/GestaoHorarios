@@ -2,3 +2,9 @@ c:\users\1019044\documents\visual studio 2015\Projects\GestaoHorarios\GestaoHora
 C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
 D:\Projetos\C#\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.pdb
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Properties.Resources.resources
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csproj.GenerateResource.Cache
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.exe
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.pdb

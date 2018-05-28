@@ -21,7 +21,7 @@ namespace GestaoHorarios.classes
         _20h50 = 2
     }
 
-    class Horario : IDado
+    public class Horario : IDado
     {
         private int id;
         private DiaSemana diaSemana;
