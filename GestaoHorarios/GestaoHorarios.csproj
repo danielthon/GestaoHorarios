@@ -61,10 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Alocacao.cs" />
     <Compile Include="classes\Administrador.cs" />
     <Compile Include="classes\DAL\TableAdministrador.cs" />
+    <Compile Include="classes\DAL\TableAlocacao.cs" />
     <Compile Include="classes\DAL\TableDisciplina.cs" />
     <Compile Include="classes\DAL\MySQL\Conexao.cs" />
+    <Compile Include="classes\DAL\TableHorario.cs" />
+    <Compile Include="classes\DAL\TableLog.cs" />
     <Compile Include="classes\DAL\TableProfessor.cs" />
     <Compile Include="classes\DAL\ExecutorComandos.cs" />
     <Compile Include="classes\DAL\TableUsuario.cs" />
@@ -112,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDL_v03.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

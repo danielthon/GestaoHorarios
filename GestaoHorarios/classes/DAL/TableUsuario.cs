@@ -9,20 +9,56 @@ namespace GestaoHorarios.classes.DAL
 
         static string[] campos =
         {
-            "",
-            ""
+            "Nome",
+            "Login",
+            "Senha"
         };
 
-        public static void Inserir(string[] values) { ExecutorComandos.Insert(tabela, values); }
+        public static void Inserir(Usuario usuario)
+        {
+            string[] values =
+            {
+                usuario.Nome,
+                usuario.Login,
+                usuario.Senha
+            };
 
-        public static DataTable Visualizar() { return ExecutorComandos.Select(tabela); }
+            ExecutorComandos.Insert(tabela, values);
 
-        public static DataTable Visualizar(int id) { return ExecutorComandos.Select(tabela, id); }
+            //usuario.ID = ?
+        }
 
-        public static DataTable Visualizar(string[] campos, int id) { return ExecutorComandos.Select(tabela, campos, id); }
+        public static DataTable Visualizar()
+        {
+            return ExecutorComandos.Select(tabela);
+        }
 
-        public static void Alterar(string[] values, int id) { ExecutorComandos.Update(tabela, campos, values, id); }
+        public static DataTable Visualizar(string id)
+        {
+            return ExecutorComandos.Select(tabela, id);
+        }
 
-        public static void Excluir(int id) { ExecutorComandos.Delete(tabela, id); }
+        public static string Visualizar(string campo, string id)
+        {
+            return ExecutorComandos.Select(tabela, campo, id);
+        }
+
+        public static void Alterar(Usuario usuario)
+        {
+            string[] values =
+            {
+                usuario.Nome,
+                usuario.Login,
+                usuario.Senha
+            };
+
+            ExecutorComandos.Update(tabela, campos, values, usuario.ID);
+        }
+
+        public static void Excluir(Usuario usuario)
+        {
+            ExecutorComandos.Delete(tabela, usuario.ID);
+            usuario = null;
+        }
     }
 }

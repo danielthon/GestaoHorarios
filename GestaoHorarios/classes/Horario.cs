@@ -23,12 +23,13 @@ namespace GestaoHorarios.classes
 
     class Horario : IDado
     {
-        //private int id; //?
+        private int id;
         private DiaSemana diaSemana;
         private Hora hora;
 
+        public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
         public DiaSemana DiaNaSemana { get { return this.diaSemana; } }
-        public Hora HorarioDeInicio { get { return this.hora; } }
+        public Hora Hora { get { return this.hora; } }
 
         public Horario(DiaSemana dia, Hora hora)
         {

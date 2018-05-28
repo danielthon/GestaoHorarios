@@ -3,26 +3,28 @@ using System.Data;
 
 namespace GestaoHorarios.classes.DAL
 {
-    class TableProfessor
+    class TableLog
     {
-        static string tabela = "professor";
+        static string tabela = "log";
 
         static string[] campos =
         {
-            "Is_Usuario"
+            "Hora",
+            "Operacao",
+            "Id_Alocacao",
+            "Id_Usuario"
         };
 
-        public static void Inserir(Professor prof)
+        public static void Inserir(string operacao, Usuario usuario, Alocacao alocacao)
         {
             string[] values =
             {
-                prof.ID_Usuario
+                string.Format("'{0}'", DateTime.Now.ToString("yyyy-MM-dd hh:mm")),
+                alocacao.ID,
+                usuario.ID
             };
 
-            TableUsuario.Inserir(prof);
             ExecutorComandos.Insert(tabela, values);
-
-            //usuario.ID = ?
         }
 
         public static DataTable Visualizar()
@@ -38,20 +40,6 @@ namespace GestaoHorarios.classes.DAL
         public static string Visualizar(string campo, string id)
         {
             return ExecutorComandos.Select(tabela, campo, id);
-        }
-
-        public static void Alterar(Usuario usuario)
-        {
-            //verificar se o Id_Usuario alterou
-        }
-
-        public static void Excluir(Professor prof)
-        {
-            ExecutorComandos.Delete(tabela, prof.ID);
-
-            TableUsuario.Excluir(prof);
-
-            prof = null;
         }
     }
 }

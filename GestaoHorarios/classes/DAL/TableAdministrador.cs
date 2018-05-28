@@ -9,20 +9,49 @@ namespace GestaoHorarios.classes.DAL
 
         static string[] campos =
         {
-            "",
-            ""
+            "Id_Usuario"
         };
 
-        public static void Inserir(string[] values) { ExecutorComandos.Insert(tabela, values); }
+        public static void Inserir(Administrador admin)
+        {
+            string[] values =
+            {
+                admin.ID_Usuario
+            };
 
-        public static DataTable Visualizar() { return ExecutorComandos.Select(tabela); }
+            TableUsuario.Inserir(admin);
+            ExecutorComandos.Insert(tabela, values);
 
-        public static DataTable Visualizar(int id) { return ExecutorComandos.Select(tabela, id); }
+            //usuario.ID = ?
+        }
 
-        public static DataTable Visualizar(string[] campos, int id) { return ExecutorComandos.Select(tabela, campos, id); }
+        public static DataTable Visualizar()
+        {
+            return ExecutorComandos.Select(tabela);
+        }
 
-        public static void Alterar(string[] values, int id) { ExecutorComandos.Update(tabela, campos, values, id); }
+        public static DataTable Visualizar(string id)
+        {
+            return ExecutorComandos.Select(tabela, id);
+        }
 
-        public static void Excluir(int id) { ExecutorComandos.Delete(tabela, id); }
+        public static string Visualizar(string campo, string id)
+        {
+            return ExecutorComandos.Select(tabela, campo, id);
+        }
+
+        public static void Alterar(Usuario usuario)
+        {
+            //verificar se o Id_Usuario alterou
+        }
+
+        public static void Excluir(Administrador admin)
+        {
+            ExecutorComandos.Delete(tabela, admin.ID);
+
+            TableUsuario.Excluir(admin);
+
+            admin = null;
+        }
     }
 }

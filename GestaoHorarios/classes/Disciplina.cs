@@ -6,13 +6,17 @@ namespace GestaoHorarios.classes
 {
     class Disciplina : IDado
     {
-        //private int id; //?
+        private int id;
         private string nome;
         private int qtdSemana;
-        //private Professor professor;
-        //private int periodo;
+        private Professor professor;
+        private int periodo;
 
+        public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        public int Periodo { get { return this.periodo; } }
         public string Nome { get { return this.nome; } }
+        public Professor Professor { get { return this.professor; } }
+
         public int QuantidadeNaSemana { get { return this.qtdSemana; } }
 
         public Disciplina(string nome, int qtdSemana)

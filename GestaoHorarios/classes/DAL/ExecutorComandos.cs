@@ -11,12 +11,12 @@ namespace GestaoHorarios.classes.DAL
         {
             StringBuilder str = new StringBuilder();
 
-            str.AppendFormat("INSERT INTO {0} VALUES (''", tabela);
+            str.AppendFormat("INSERT INTO {0} VALUES (null", tabela);
 
             foreach (string value in values)
             {
-                if (value == "")
-                    str.Append(",''");
+                if (value == "" || value == null)
+                    str.Append(",null");
                 else
                     str.Append("," + value);
             }
@@ -31,22 +31,17 @@ namespace GestaoHorarios.classes.DAL
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0};", tabela));
         }
 
-        internal static DataTable Select(string tabela, int id)
+        internal static DataTable Select(string tabela, string id)
         {
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
         }
 
-        internal static DataTable Select(string tabela, string[] campos, int id)
+        internal static string Select(string tabela, string campo, string id)
         {
-            StringBuilder str = new StringBuilder();
-
-            foreach (string campo in campos)
-                str.Append("," + campo);
-
-            return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT {0} FROM {1} WHERE id={2};", str.ToString(), tabela, id));
+            return Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT {0} FROM {1} WHERE id={2};", campo, tabela, id));
         }
 
-        internal static void Update(string tabela, string[] campos, string[] values, int id)
+        internal static void Update(string tabela, string[] campos, string[] values, string id)
         {
             if (campos.Length != values.Length)
                 throw new Exception("Quantidade de campos distinta da quantidade de valores de entrada.");
@@ -58,14 +53,16 @@ namespace GestaoHorarios.classes.DAL
                 if (i != 0)
                     str.Append(", ");
 
-                if (values[i] != "")
+                if (values[i] == "" || values[i] == null)
+                    str.AppendFormat("{0}=null", campos[i]);
+                else
                     str.AppendFormat("{0}={1}", campos[i], values[i]);
             }
 
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("UPDATE {0} SET {1} WHERE id={2};", tabela, str.ToString(), id));
         }
 
-        internal static void Delete(string tabela, int id)
+        internal static void Delete(string tabela, string id)
         {
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("DELETE FROM {0} WHERE id={1};", tabela, id));
         }

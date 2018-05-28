@@ -3,15 +3,14 @@ using System.Data;
 
 namespace GestaoHorarios.classes.DAL
 {
-    class TableDisciplina
+    class TableAlocacao
     {
-        static string tabela = "disciplina";
+        static string tabela = "alocacao";
 
         static string[] campos =
         {
-            "Id_Periodo",
-            "Nome",
-            "Id_Professor"
+            "Id_Disciplina",
+            "Id_Horario"
         };
     }
 }
