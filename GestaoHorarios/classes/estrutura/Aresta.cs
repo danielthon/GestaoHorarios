@@ -19,6 +19,11 @@ namespace GestaoHorarios.classes.estrutura
         {
             this.vertice1 = v1;
             this.vertice2 = v2;
+
+            if(!v1.Contem(this))
+                v1.Arestas.Add(this);
+            if(!v2.Contem(this))
+                v2.Arestas.Add(this);
         }
 
         public bool Contem(Vertice v)
