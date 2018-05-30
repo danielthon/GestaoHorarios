@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using BLL.Estruturas;
 
-namespace GestaoHorarios.classes
+namespace BLL.Entidades
 {
     public class Professor : Usuario
     {

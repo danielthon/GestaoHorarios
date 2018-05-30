@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoHorarios.classes.estrutura
+namespace BLL.Estruturas
 {
     class Aresta
     {

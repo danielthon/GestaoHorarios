@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using GestaoHorarios.classes.estrutura;
+using BLL.Estruturas;
 
-namespace GestaoHorarios.classes
+namespace BLL.Entidades
 {
     public enum DiaSemana
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GestaoHorarios.classes.estrutura
+namespace BLL.Estruturas
 {
     public interface IDado : IEquatable<IDado>
     {

@@ -1,4 +1,4 @@
-﻿namespace GestaoHorarios.telas
+﻿namespace GestaoHorarios.Telas
 {
     partial class Home
     {

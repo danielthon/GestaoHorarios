@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestaoHorarios.telas
+namespace GestaoHorarios.Telas
 {
     public partial class Home : Form
     {
