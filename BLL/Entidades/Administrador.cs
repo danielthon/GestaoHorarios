@@ -36,6 +36,9 @@ namespace BLL.Entidades
                 {
                     tabelaU.Insert(valuesU);  // INSERIR
                     tabelaA.Insert(valuesA);  // INSERIR
+                    
+                    if (!base.ExisteNoBanco()) //usuario
+                        throw new Exception("Dado não inserido no banco!");
                 }
                 else
                 {
@@ -44,6 +47,9 @@ namespace BLL.Entidades
                     if (!this.ExisteNoBanco()) //administrador
                         tabelaA.Insert(valuesA);  // INSERIR
                     // *
+                    
+                    if (!this.ExisteNoBanco()) //administrador
+                        throw new Exception("Dado não inserido no banco!");
                 }
             }
             else
