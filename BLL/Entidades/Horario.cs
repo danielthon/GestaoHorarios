@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DAL.Tabelas;
 using BLL.Estruturas;
 
 namespace BLL.Entidades
@@ -21,7 +22,7 @@ namespace BLL.Entidades
         _20h50 = 2
     }
 
-    public class Horario : IDado
+    public class Horario : IEntidade, IDado
     {
         private int id;
         private DiaSemana diaSemana;
@@ -60,6 +61,21 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public void SalvarNoBanco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoverDoBanco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ExisteNoBanco()
+        {
+            throw new NotImplementedException();
         }
     }
 }

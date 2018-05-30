@@ -44,6 +44,7 @@
     <Compile Include="Entidades\Alocacao.cs" />
     <Compile Include="Entidades\Disciplina.cs" />
     <Compile Include="Entidades\Horario.cs" />
+    <Compile Include="Entidades\IEntidade.cs" />
     <Compile Include="Entidades\Professor.cs" />
     <Compile Include="Estruturas\Aresta.cs" />
     <Compile Include="Estruturas\Grafo.cs" />
@@ -51,6 +52,12 @@
     <Compile Include="Estruturas\Vertice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{32bb151c-6a0b-4192-97c0-bbec42cd2682}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using DAL;
-using DAL.MySQL;
-
+﻿
 namespace DAL.Tabelas
 {
     public class TProfessor : Tabela
@@ -12,6 +8,11 @@ namespace DAL.Tabelas
             this.tabela = "professor";
 
             this.campos = new string[]
+            {
+                "Id_Usuario"
+            };
+
+            this.camposChave = new string[]
             {
                 "Id_Usuario"
             };

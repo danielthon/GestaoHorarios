@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using DAL;
-using DAL.MySQL;
-
+﻿
 namespace DAL.Tabelas
 {
     public class TLog : Tabela
@@ -12,6 +8,14 @@ namespace DAL.Tabelas
             this.tabela = "log";
 
             this.campos = new string[]
+            {
+                "Hora",
+                "Operacao",
+                "Id_Alocacao",
+                "Id_Usuario"
+            };
+
+            this.camposChave = new string[]
             {
                 "Hora",
                 "Operacao",

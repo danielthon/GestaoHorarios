@@ -71,12 +71,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GestaoHorarios\GestaoHorarios.csproj">
-      <Project>{71a4bd30-1222-4291-acb0-9cbe87f12211}</Project>
-      <Name>GestaoHorarios</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="MySQL\DDL_v03.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

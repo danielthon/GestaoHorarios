@@ -1,7 +1,4 @@
-﻿using System;
-using DAL;
-using DAL.MySQL;
-
+﻿
 namespace DAL.Tabelas
 {
     public class THorario : Tabela
@@ -11,6 +8,13 @@ namespace DAL.Tabelas
             this.tabela = "horario";
 
             this.campos = new string[]
+            {
+                "HoraInicio",
+                "HoraTermino",
+                "DiaSemana"
+            };
+
+            this.camposChave = new string[]
             {
                 "HoraInicio",
                 "HoraTermino",

@@ -9,6 +9,17 @@ namespace DAL.Tabelas
     {
         protected string tabela;
         protected string[] campos;
+        protected string[] camposChave;
+
+        /// <summary>
+        /// Retorna o nome das colunas da respectiva tabela no banco de dados
+        /// </summary>
+        public string[] getCampos { get { return this.campos; } }
+
+        /// <summary>
+        /// Retorna o nome das colunas das quais não podem conter valores duplicados (dois registros com o mesmo dado) no banco de dados
+        /// </summary>
+        public string[] getCamposChave { get { return this.camposChave; } }
 
         public void Insert(string[] values)
         {
@@ -39,12 +50,12 @@ namespace DAL.Tabelas
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
         }
 
-        public string Select(string campo, string id)
+        public string Select(string campo, int id)
         {
             return Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT {0} FROM {1} WHERE id={2};", campo, tabela, id));
         }
 
-        public void Update(string[] values, string id)
+        public void Update(string[] values, int id)
         {
             if (campos.Length != values.Length)
                 throw new Exception("Quantidade de campos distinta da quantidade de valores de entrada.");
@@ -65,9 +76,50 @@ namespace DAL.Tabelas
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("UPDATE {0} SET {1} WHERE id={2};", tabela, str.ToString(), id));
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("DELETE FROM {0} WHERE id={1};", tabela, id));
+        }
+
+        public bool Exists(string[] valoresChave)
+        {
+            if (camposChave.Length != valoresChave.Length)
+                throw new Exception("Quantidade de campos distinta da quantidade de valores de entrada.");
+
+            StringBuilder str = new StringBuilder();
+
+            for (int i = 0; i < camposChave.Length; i++)
+            {
+                if (i != 0)
+                    str.Append(", ");
+
+                if (valoresChave[i] != "" && valoresChave[i] != null)
+                    str.AppendFormat("{0}={1}", camposChave[i], valoresChave[i]);
+            }
+
+            return Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT id FROM {0} WHERE {1};", tabela)) != null;
+        }
+
+        public bool Exists(string[] valoresChave, out int id)
+        {
+            if (camposChave.Length != valoresChave.Length)
+                throw new Exception("Quantidade de campos distinta da quantidade de valores de entrada.");
+
+            StringBuilder str = new StringBuilder();
+
+            for (int i = 0; i < camposChave.Length; i++)
+            {
+                if (i != 0)
+                    str.Append(", ");
+
+                if (valoresChave[i] != "" && valoresChave[i] != null)
+                    str.AppendFormat("{0}={1}", camposChave[i], valoresChave[i]);
+            }
+
+            if (int.TryParse(Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT id FROM {0} WHERE {1};", tabela)), out id))
+                return false;
+            else
+                return true;
         }
     }
 }

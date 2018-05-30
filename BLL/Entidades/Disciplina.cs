@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using DAL.Tabelas;
 using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    public class Disciplina : IDado
+    public class Disciplina : IEntidade, IDado
     {
         private int id;
         private string nome;
@@ -41,6 +42,21 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public void SalvarNoBanco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoverDoBanco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ExisteNoBanco()
+        {
+            throw new NotImplementedException();
         }
     }
 }

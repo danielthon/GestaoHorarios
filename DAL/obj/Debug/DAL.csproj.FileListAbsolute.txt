@@ -1,10 +1,8 @@
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\DAL.dll
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\DAL.pdb
-D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\GestaoHorarios.exe
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\Google.Protobuf.dll
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\MySql.Data.dll
-D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\GestaoHorarios.pdb
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\Google.Protobuf.xml
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\bin\Debug\MySql.Data.xml
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\obj\Debug\DAL.dll

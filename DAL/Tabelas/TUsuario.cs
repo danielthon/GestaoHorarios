@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using DAL;
-using DAL.MySQL;
-
+﻿
 namespace DAL.Tabelas
 {
     public class TUsuario : Tabela
@@ -16,6 +12,11 @@ namespace DAL.Tabelas
                 "Nome",
                 "Login",
                 "Senha"
+            };
+
+            this.camposChave = new string[]
+            {
+                "Login"
             };
         }
 

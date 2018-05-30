@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using DAL.Tabelas;
 using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    public class Alocacao
+    public class Alocacao : IEntidade
     {
         private int id;
         private Disciplina disciplina;
@@ -17,5 +16,19 @@ namespace BLL.Entidades
         public Disciplina Disciplina { get { return this.disciplina; } }
         public Horario Horario { get { return this.horario; } }
         public Professor Professor { get { return this.disciplina.Professor; } }
+
+        public void SalvarNoBanco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoverDoBanco()
+        {
+            throw new NotImplementedException();
+        }
+        public bool ExisteNoBanco()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
