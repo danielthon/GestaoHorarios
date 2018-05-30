@@ -1,5 +1,4 @@
 ﻿using System;
-using GestaoHorarios.classes;
 using DAL;
 using DAL.MySQL;
 

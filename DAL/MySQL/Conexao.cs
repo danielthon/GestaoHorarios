@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -13,10 +11,10 @@ namespace DAL.MySQL
     {
         static private MySqlConnection conn;
 
-        public static bool SetConexao(string instancia, string bd, out string mensagem)
+        public static bool SetConexao(string servidor, string bd, out string mensagem)
         {
             StringBuilder str = new StringBuilder();
-            str.Append("Server=" + instancia);
+            str.Append("Server=" + servidor); //padrão = "localhost"
             str.Append(";Database=" + bd);
             str.Append(";Uid=root");
             str.Append(";Pwd=");
@@ -37,7 +35,7 @@ namespace DAL.MySQL
                 try
                 {
                     str = new StringBuilder();
-                    str.Append("Server=" + instancia);
+                    str.Append("Server=" + servidor);
                     str.Append(";Database=mysql");
                     str.Append(";Uid=root");
                     str.Append(";Pwd=");

@@ -1,0 +1,5 @@
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\BLL\bin\Debug\BLL.dll
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\BLL\bin\Debug\BLL.pdb
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\BLL\obj\Debug\BLL.dll
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\BLL\obj\Debug\BLL.pdb

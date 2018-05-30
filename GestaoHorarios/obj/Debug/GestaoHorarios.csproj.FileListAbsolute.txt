@@ -8,3 +8,4 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorar
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csproj.GenerateResource.Cache
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.exe
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.pdb
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csprojResolveAssemblyReference.cache
