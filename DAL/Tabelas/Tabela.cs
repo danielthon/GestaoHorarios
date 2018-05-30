@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Text;
-using System.Data;
 using DAL.MySQL;
+using System.Data;
 
-namespace DAL
+namespace DAL.Tabelas
 {
-    internal class ExecutorComandos
+    public abstract class Tabela
     {
-        internal static void Insert(string tabela, string[] values)
+        protected string tabela;
+        protected string[] campos;
+
+        public void Insert(string[] values)
         {
             StringBuilder str = new StringBuilder();
 
@@ -26,22 +29,22 @@ namespace DAL
             Conexao.ExecutaComandoSQL_SemRetorno(str.ToString());
         }
 
-        internal static DataTable Select(string tabela)
+        public DataTable SelectAll()
         {
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0};", tabela));
         }
 
-        internal static DataTable Select(string tabela, string id)
+        public DataTable Select(string id)
         {
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
         }
 
-        internal static string Select(string tabela, string campo, string id)
+        public string Select(string campo, string id)
         {
             return Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT {0} FROM {1} WHERE id={2};", campo, tabela, id));
         }
 
-        internal static void Update(string tabela, string[] campos, string[] values, string id)
+        public void Update(string[] values, string id)
         {
             if (campos.Length != values.Length)
                 throw new Exception("Quantidade de campos distinta da quantidade de valores de entrada.");
@@ -62,7 +65,7 @@ namespace DAL
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("UPDATE {0} SET {1} WHERE id={2};", tabela, str.ToString(), id));
         }
 
-        internal static void Delete(string tabela, string id)
+        public void Delete(string id)
         {
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("DELETE FROM {0} WHERE id={1};", tabela, id));
         }

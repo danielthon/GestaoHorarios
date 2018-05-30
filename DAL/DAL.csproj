@@ -56,16 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExecutorComandos.cs" />
     <Compile Include="MySQL\Conexao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tables\TableAdministrador.cs" />
-    <Compile Include="Tables\TableAlocacao.cs" />
-    <Compile Include="Tables\TableDisciplina.cs" />
-    <Compile Include="Tables\TableHorario.cs" />
-    <Compile Include="Tables\TableLog.cs" />
-    <Compile Include="Tables\TableProfessor.cs" />
-    <Compile Include="Tables\TableUsuario.cs" />
+    <Compile Include="Tabelas\Tabela.cs" />
+    <Compile Include="Tabelas\TAdministrador.cs" />
+    <Compile Include="Tabelas\TAlocacao.cs" />
+    <Compile Include="Tabelas\TDisciplina.cs" />
+    <Compile Include="Tabelas\THorario.cs" />
+    <Compile Include="Tabelas\TLog.cs" />
+    <Compile Include="Tabelas\TProfessor.cs" />
+    <Compile Include="Tabelas\TUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
