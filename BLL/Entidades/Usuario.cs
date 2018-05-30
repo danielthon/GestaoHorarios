@@ -40,31 +40,33 @@ namespace BLL.Entidades
                 return false;
         }
 
-        public virtual void SalvarNoBanco()
-        {
-            TUsuario tabela = new TUsuario();
-            string[] values =
-            {
-                this.nome,
-                this.login,
-                this.senha
-            };
+        public abstract void SalvarNoBanco();
 
-            if (this.id == 0) //nao possui id, então 'this' ainda nao foi inserido no banco
-            {
-                string[] valoresChave =
-                {
-                    this.login
-                };
+        //public virtual void SalvarNoBanco()
+        //{
+        //    TUsuario tabela = new TUsuario();
+        //    string[] values =
+        //    {
+        //        this.nome,
+        //        this.login,
+        //        this.senha
+        //    };
 
-                if (!this.ExisteNoBanco()) 
-                    tabela.Insert(values);  // INSERIR
-                else
-                    tabela.Update(values, this.id); // ALTERAR
-            }
-            else
-                tabela.Update(values, this.id); // ALTERAR
-        }
+        //    if (this.id == 0) //nao possui id, então 'this' ainda nao foi inserido no banco
+        //    {
+        //        string[] valoresChave =
+        //       {
+        //            this.login
+        //        };
+
+        //        if (!this.ExisteNoBanco()) 
+        //            tabela.Insert(values);  // INSERIR
+        //        else
+        //            tabela.Update(values, this.id); // ALTERAR
+        //    }
+        //    else
+        //        tabela.Update(values, this.id); // ALTERAR
+        //}
 
         public abstract void RemoverDoBanco();
 
