@@ -9,3 +9,5 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorar
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.exe
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.pdb
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csprojResolveAssemblyReference.cache
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.Home.resources
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.VisualizacaoHorarios.resources
