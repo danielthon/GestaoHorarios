@@ -106,7 +106,7 @@
     <Compile Include="Telas\PerfilUsuario.Designer.cs">
       <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="temp.cs" />
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Telas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
