@@ -45,6 +45,7 @@
     <Compile Include="Entidades\Disciplina.cs" />
     <Compile Include="Entidades\Horario.cs" />
     <Compile Include="Entidades\IEntidade.cs" />
+    <Compile Include="Entidades\Periodo.cs" />
     <Compile Include="Entidades\Professor.cs" />
     <Compile Include="Estruturas\Aresta.cs" />
     <Compile Include="Estruturas\Grafo.cs" />

@@ -5,7 +5,7 @@ using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    public class Administrador : Usuario, IEntidade
+    public class Administrador : Usuario//, IEntidade
     {
         int id_admin;
 

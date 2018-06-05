@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace BLL.Estruturas
 {
-    class Grafo
+    public class Grafo
     {
         private List<Vertice> vertices;
         private List<Aresta> arestas;
 
         public List<Vertice> Vertices { get { return this.vertices; } }
         public List<Aresta> Arestas { get { return this.arestas; } }
+
+        public Grafo()
+        {
+            this.vertices = new List<Vertice>();
+            this.arestas = new List<Aresta>();
+        }
 
         public void AddVertice(Vertice novo)
         {

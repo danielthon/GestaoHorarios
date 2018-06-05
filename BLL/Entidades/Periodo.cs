@@ -7,7 +7,7 @@ using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    class Periodo : IEntidade, IDado
+    ´public class Periodo : IEntidade, IDado
     {
         private int numero;
 

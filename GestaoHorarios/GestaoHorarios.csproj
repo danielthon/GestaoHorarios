@@ -100,6 +100,13 @@
     <Compile Include="Telas\ManutencaoUsuarios.Designer.cs">
       <DependentUpon>ManutencaoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\PerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\PerfilUsuario.Designer.cs">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="temp.cs" />
     <EmbeddedResource Include="Telas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +140,12 @@
     <Content Include="clock.ico" />
     <None Include="Resources\bg01.jpg" />
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{40dbf605-5ae7-4297-a7fa-ee189bd24b10}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

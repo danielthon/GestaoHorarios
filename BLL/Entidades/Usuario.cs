@@ -5,7 +5,7 @@ using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    public abstract class Usuario : IEntidade, IDado
+    public abstract class Usuario : IEntidade
     {
         protected int id;
         protected string nome;
@@ -25,19 +25,6 @@ namespace BLL.Entidades
             this.nome = nome;
             this.login = login;
             this.senha = senha;
-        }
-
-        public int CompareTo(IDado other)
-        {
-            throw new NotSupportedException();
-        }
-
-        public bool Equals(IDado other)
-        {
-            if (this.Equals((Professor)other)) //cast para lançar exceção
-                return true;
-            else
-                return false;
         }
 
         public abstract void SalvarNoBanco();

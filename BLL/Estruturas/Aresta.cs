@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace BLL.Estruturas
 {
-    class Aresta
+    public class Aresta
     {
         private Vertice vertice1;
         private Vertice vertice2;
-        private IDado cor; //?
 
         public Vertice VerticePrimeiro { get { return this.vertice1; } }
         public Vertice VerticeSegundo { get { return this.vertice2; } }
@@ -22,6 +21,7 @@ namespace BLL.Estruturas
 
             if(!v1.Contem(this))
                 v1.Arestas.Add(this);
+
             if(!v2.Contem(this))
                 v2.Arestas.Add(this);
         }
@@ -34,6 +34,16 @@ namespace BLL.Estruturas
                 return true;
             else
                 return false;
+        }
+
+        public Vertice OutraExtremidade(Vertice v)
+        {
+            if (this.vertice1.Equals(v))
+                return this.vertice2;
+            else if (this.vertice2.Equals(v))
+                return this.vertice1;
+            else
+                return null;
         }
     }
 }
