@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>clock.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
@@ -53,19 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Telas\ConsultaHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ConsultaHorarios.Designer.cs">
+      <DependentUpon>ConsultaHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telas\Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\AlocacaoHorarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\AlocacaoHorarios.Designer.cs">
-      <DependentUpon>AlocacaoHorarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Login.cs">
       <SubType>Form</SubType>
@@ -73,14 +82,26 @@
     <Compile Include="Telas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\VisualizacaoHorarios.cs">
+    <Compile Include="Telas\ManutencaoDisciplinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\VisualizacaoHorarios.Designer.cs">
-      <DependentUpon>VisualizacaoHorarios.cs</DependentUpon>
+    <Compile Include="Telas\ManutencaoDisciplinas.Designer.cs">
+      <DependentUpon>ManutencaoDisciplinas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Telas\ManutencaoHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ManutencaoHorarios.Designer.cs">
+      <DependentUpon>ManutencaoHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ManutencaoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ManutencaoUsuarios.Designer.cs">
+      <DependentUpon>ManutencaoUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Telas\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,9 +111,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Telas\VisualizacaoHorarios.resx">
-      <DependentUpon>VisualizacaoHorarios.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clock.ico" />
+    <None Include="Resources\bg01.jpg" />
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

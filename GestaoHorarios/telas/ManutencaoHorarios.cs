@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GestaoHorarios.Telas
 {
-    public partial class Home : Form
+    public partial class ManutencaoHorarios : FormBase
     {
-        public Home()
+        public ManutencaoHorarios()
         {
             InitializeComponent();
-        }
-
-        private void alocaçãoDeHoráriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManutencaoHorarios childForm = new ManutencaoHorarios();
-            childForm.MdiParent = this;
-            childForm.Show();
         }
     }
 }

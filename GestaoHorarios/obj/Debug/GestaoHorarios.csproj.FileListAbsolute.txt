@@ -11,3 +11,11 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorar
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csprojResolveAssemblyReference.cache
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.Home.resources
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.VisualizacaoHorarios.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.exe
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.pdb
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.FormBase.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.Home.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Properties.Resources.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csproj.GenerateResource.Cache
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.pdb

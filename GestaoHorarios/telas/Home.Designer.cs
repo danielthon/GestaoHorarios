@@ -28,64 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.alocaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alocarHoráriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alocaçãoDeHoráriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip
+            // menuStrip1
             // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alocaçãoToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(632, 24);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manutençãoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // alocaçãoToolStripMenuItem
+            // manutençãoToolStripMenuItem
             // 
-            this.alocaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alocarHoráriosToolStripMenuItem});
-            this.alocaçãoToolStripMenuItem.Name = "alocaçãoToolStripMenuItem";
-            this.alocaçãoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.alocaçãoToolStripMenuItem.Text = "Alocação";
+            this.manutençãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alocaçãoDeHoráriosToolStripMenuItem});
+            this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
+            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.manutençãoToolStripMenuItem.Text = "Manutenção";
             // 
-            // alocarHoráriosToolStripMenuItem
+            // alocaçãoDeHoráriosToolStripMenuItem
             // 
-            this.alocarHoráriosToolStripMenuItem.Name = "alocarHoráriosToolStripMenuItem";
-            this.alocarHoráriosToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.alocarHoráriosToolStripMenuItem.Text = "Alocar Horários";
-            this.alocarHoráriosToolStripMenuItem.Click += new System.EventHandler(this.alocarHoráriosToolStripMenuItem_Click);
+            this.alocaçãoDeHoráriosToolStripMenuItem.Name = "alocaçãoDeHoráriosToolStripMenuItem";
+            this.alocaçãoDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.alocaçãoDeHoráriosToolStripMenuItem.Text = "Alocação de Horários";
+            this.alocaçãoDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.alocaçãoDeHoráriosToolStripMenuItem_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 453);
-            this.Controls.Add(this.menuStrip);
+            this.BackgroundImage = global::GestaoHorarios.Properties.Resources.bg01;
+            this.ClientSize = new System.Drawing.Size(866, 443);
+            this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Home";
-            this.Text = "Home";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
+            this.Text = "Gestão de Horários";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
         #endregion
 
-
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem alocaçãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alocarHoráriosToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alocaçãoDeHoráriosToolStripMenuItem;
     }
 }
-
-
-
