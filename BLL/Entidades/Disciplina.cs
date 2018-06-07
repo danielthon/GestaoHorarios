@@ -9,31 +9,36 @@ namespace BLL.Entidades
     {
         private int id;
         private string nome;
-        private int qtdSemana;
-        private Professor professor;
+        //private int qtdSemana;
+        private int id_professor;
         private int periodo;
 
-        public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        //public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        public int ID { get { return this.id; } }
         public int Periodo { get { return this.periodo; } }
         public string Nome { get { return this.nome; } }
-        public Professor Professor { get { return this.professor; } }
+        public int ID_Professor { get { return this.id_professor; } }
 
-        public int QuantidadeNaSemana { get { return this.qtdSemana; } }
+        //public int QuantidadeNaSemana { get { return this.qtdSemana; } }
 
-        public Disciplina(string nome, int qtdSemana)
+        public Disciplina(string nome/*, int qtdSemana*/)
         {
             this.nome = nome;
-            this.qtdSemana = qtdSemana;
+            //this.qtdSemana = qtdSemana;
+
+            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public int CompareTo(IDado other)
         {
-            if (this.qtdSemana < ((Disciplina)other).QuantidadeNaSemana)
-                return -1;
-            if (this.qtdSemana > ((Disciplina)other).QuantidadeNaSemana)
-                return 1;
-            else
-                return 0;
+            //if (this.qtdSemana < ((Disciplina)other).QuantidadeNaSemana)
+            //    return -1;
+            //if (this.qtdSemana > ((Disciplina)other).QuantidadeNaSemana)
+            //    return 1;
+            //else
+            //    return 0;
+
+            throw new NotSupportedException();
         }
 
         public bool Equals(IDado other)

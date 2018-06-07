@@ -28,7 +28,8 @@ namespace BLL.Entidades
         private DiaSemana diaSemana;
         private Hora hora;
 
-        public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        //public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        public int ID { get { return this.id; } }
         public DiaSemana DiaNaSemana { get { return this.diaSemana; } }
         public Hora Hora { get { return this.hora; } }
 
