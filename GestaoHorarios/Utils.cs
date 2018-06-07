@@ -28,14 +28,14 @@ namespace GestaoHorarios
 
             Grafo g = new Grafo();
 
-            string nomeProfessor = "Caram";
-            string nomeDisciplina = "POO";
-            int periodo = 2;
-            int qtdSemana = 2;
+            //string nomeProfessor = "Caram";
+            //string nomeDisciplina = "POO";
+            //int periodo = 2;
+            //int qtdSemana = 2;
 
-            g.AddVertice(new Vertice(new Professor(nomeProfessor, nomeProfessor, nomeProfessor)));
-            g.AddVertice(new Vertice(new Disciplina(nomeDisciplina, qtdSemana)));
-            g.AddVertice(new Vertice(new Periodo(periodo)));
+            //g.AddVertice(new Vertice(new Professor(nomeProfessor, nomeProfessor, nomeProfessor)));
+            //g.AddVertice(new Vertice(new Disciplina(nomeDisciplina, qtdSemana)));
+            //g.AddVertice(new Vertice(new Periodo(periodo)));
         }
 
         public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina, out Alocacao alocacao)

@@ -37,6 +37,9 @@ namespace BLL.Entidades
         {
             this.diaSemana = dia;
             this.hora = hora;
+
+            this.id = 0;
+            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public int CompareTo(IDado other)

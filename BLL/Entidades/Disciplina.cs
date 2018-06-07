@@ -21,11 +21,14 @@ namespace BLL.Entidades
 
         //public int QuantidadeNaSemana { get { return this.qtdSemana; } }
 
-        public Disciplina(string nome/*, int qtdSemana*/)
+        public Disciplina(string nome, int id_professor, int periodo/*, int qtdSemana*/)
         {
             this.nome = nome;
+            this.id_professor = id_professor;
+            this.periodo = periodo;
             //this.qtdSemana = qtdSemana;
 
+            this.id = 0;
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
