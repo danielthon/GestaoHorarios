@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DAL.Tabelas;
 using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
@@ -24,6 +25,8 @@ namespace BLL.Entidades
 
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
+
+        public Alocacao(int id) { this.CarregaAtributos(id); }
 
         public void SalvarNoBanco()
         {
@@ -47,6 +50,22 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public bool CarregaAtributos(int id)
+        {
+            DataRow linha = (new TAlocacao()).Select(id.ToString());
+
+            if (linha == null)
+                return false;
+            else
+            {
+                this.id = id;
+                this.id_disciplina = int.Parse(linha[1].ToString());
+                this.id_horario = int.Parse(linha[2].ToString());
+
+                return true;
+            }
         }
     }
 }

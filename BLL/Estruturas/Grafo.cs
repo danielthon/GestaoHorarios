@@ -20,6 +20,17 @@ namespace BLL.Estruturas
             this.arestas = new List<Aresta>();
         }
 
+        public Vertice GetVerticePorDado(IDado dado)
+        {
+            foreach(Vertice v in this.vertices)
+            {
+                if (v.GetDado.Equals(dado))
+                    return v;
+            }
+
+            return null;
+        }
+
         public void AddVertice(Vertice novo)
         {
             this.vertices.Add(novo);

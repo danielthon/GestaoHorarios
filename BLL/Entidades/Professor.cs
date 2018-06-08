@@ -16,6 +16,8 @@ namespace BLL.Entidades
 
         public Professor(string nome, string login, string senha) : base (nome, login, senha) { this.ExisteNoBanco(); } //verifica se existe, se sim, seta o id
 
+        public Professor(int id_prof, int id_usuario) : base(id_usuario) { if (this.ExisteNoBanco()) this.id_prof = id_prof; }
+
         public int CompareTo(IDado other)
         {
             throw new NotSupportedException();

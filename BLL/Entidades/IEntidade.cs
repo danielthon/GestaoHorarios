@@ -16,5 +16,11 @@
         /// </summary>
         /// <returns>Retorna se o registro foi encontrado ou não.</returns>
         bool ExisteNoBanco();
+        /// <summary>
+        /// <para>Tenta encontrar um registro no banco que contenha o id informado por parâmetro.</para>
+        /// <para>Se conseguir, carrega todas as informações do objeto.</para>
+        /// </summary>
+        /// <returns>Retorna se o registro foi encontrado ou não.</returns>
+        bool CarregaAtributos(int id);
     }
 }

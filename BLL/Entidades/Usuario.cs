@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DAL.Tabelas;
 using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
@@ -25,6 +26,11 @@ namespace BLL.Entidades
             this.senha = senha;
 
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
+        }
+
+        public Usuario(int id)
+        {
+            this.CarregaAtributos(id);
         }
 
         public abstract void SalvarNoBanco();
@@ -89,6 +95,23 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public bool CarregaAtributos(int id)
+        {
+            DataRow linha = (new TUsuario()).Select(id.ToString());
+
+            if (linha == null)
+                return false;
+            else
+            {
+                this.id_usuario = id;
+                this.nome = linha[1].ToString();
+                this.login = linha[2].ToString();
+                this.senha = linha[3].ToString();
+
+                return true;
+            }
         }
     }
 }

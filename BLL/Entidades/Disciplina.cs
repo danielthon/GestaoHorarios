@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DAL.Tabelas;
 using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
@@ -32,15 +33,10 @@ namespace BLL.Entidades
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
+        public Disciplina(int id) { this.CarregaAtributos(id); }
+
         public int CompareTo(IDado other)
         {
-            //if (this.qtdSemana < ((Disciplina)other).QuantidadeNaSemana)
-            //    return -1;
-            //if (this.qtdSemana > ((Disciplina)other).QuantidadeNaSemana)
-            //    return 1;
-            //else
-            //    return 0;
-
             throw new NotSupportedException();
         }
 
@@ -65,6 +61,23 @@ namespace BLL.Entidades
         public bool ExisteNoBanco()
         {
             throw new NotImplementedException();
+        }
+
+        public bool CarregaAtributos(int id)
+        {
+            DataRow linha = (new TDisciplina()).Select(id.ToString());
+
+            if (linha == null)
+                return false;
+            else
+            {
+                this.id = id;
+                this.periodo = int.Parse(linha[1].ToString());
+                this.nome = linha[2].ToString();
+                this.id_professor = int.Parse(linha[3].ToString());
+
+                return true;
+            }
         }
     }
 }

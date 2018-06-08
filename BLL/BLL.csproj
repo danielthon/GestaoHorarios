@@ -51,6 +51,7 @@
     <Compile Include="Estruturas\Grafo.cs" />
     <Compile Include="Estruturas\IDado.cs" />
     <Compile Include="Estruturas\Vertice.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entidades\Usuario.cs" />
   </ItemGroup>

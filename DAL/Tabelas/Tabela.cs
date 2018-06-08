@@ -45,9 +45,9 @@ namespace DAL.Tabelas
             return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0};", tabela));
         }
 
-        public DataTable Select(string id)
+        public DataRow Select(string id)
         {
-            return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
+            return Conexao.ExecutaComandoSQL_Linha(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
         }
 
         public string Select(string campo, int id)

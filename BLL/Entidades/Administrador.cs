@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DAL.Tabelas;
-using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
@@ -15,6 +15,8 @@ namespace BLL.Entidades
         public int ID_Usuario { get { return this.id_usuario; } }
 
         public Administrador(string nome, string login, string senha) : base (nome, login, senha) { }
+
+        public Administrador(int id_admin, int id_usuario) : base(id_usuario) { if (this.ExisteNoBanco()) this.id_admin = id_admin; }
 
         public override void SalvarNoBanco()
         {
