@@ -27,3 +27,4 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\BLL.pdb
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.pdb
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.xml
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\Google.Protobuf.xml
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoDisciplinas.resources

@@ -37,12 +37,13 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnHeader.BackColor = System.Drawing.Color.Black;
             this.pnHeader.Controls.Add(this.picClose);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(285, 40);
+            this.pnHeader.Size = new System.Drawing.Size(332, 38);
             this.pnHeader.TabIndex = 0;
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.form_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.form_MouseMove);
@@ -50,28 +51,36 @@
             // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.picClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picClose.BackColor = System.Drawing.Color.Black;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::GestaoHorarios.Properties.Resources.close;
-            this.picClose.Location = new System.Drawing.Point(253, 5);
+            this.picClose.Location = new System.Drawing.Point(299, 4);
+            this.picClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(26, 26);
+            this.picClose.Size = new System.Drawing.Size(30, 30);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picClose.TabIndex = 0;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.picClose.MouseLeave += new System.EventHandler(this.picClose_MouseLeave);
+            this.picClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picClose_MouseMove);
             // 
             // FormBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(285, 266);
+            this.ClientSize = new System.Drawing.Size(332, 344);
             this.Controls.Add(this.pnHeader);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FormBase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormBase";
             this.pnHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();

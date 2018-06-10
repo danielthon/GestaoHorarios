@@ -15,7 +15,6 @@ namespace GestaoHorarios.Telas
         public FormBase()
         {
             InitializeComponent();
-            pnHeader.BackColor = SystemColors.ControlLightLight;
         }
 
         bool mouseClicked;
@@ -49,6 +48,16 @@ namespace GestaoHorarios.Telas
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void picClose_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((PictureBox)sender).Image = Properties.Resources.closeW;
+        }
+
+        private void picClose_MouseLeave(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).Image = Properties.Resources.close;
         }
     }
 }

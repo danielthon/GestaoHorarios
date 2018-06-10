@@ -122,6 +122,12 @@
     <EmbeddedResource Include="Telas\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ManutencaoDisciplinas.resx">
+      <DependentUpon>ManutencaoDisciplinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ManutencaoHorarios.resx">
+      <DependentUpon>ManutencaoHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="clock.ico" />
+    <None Include="Resources\closeW.png" />
     <None Include="Resources\bg01.jpg" />
     <None Include="Resources\close.png" />
   </ItemGroup>
