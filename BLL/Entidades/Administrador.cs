@@ -92,13 +92,12 @@ namespace BLL.Entidades
 
         public override bool ExisteNoBanco()
         {
-            TAdministrador tabela = new TAdministrador();
             string[] valoresChave =
             {
                 this.id_usuario.ToString()
             };
 
-            if (tabela.Exists(valoresChave, out this.id_admin)) //consulta o banco e seta o id se encontrar o registro
+            if ((new TAdministrador()).Exists(valoresChave, out this.id_admin)) //consulta o banco e seta o id se encontrar o registro
                 return true;
             else
                 return false;

@@ -28,3 +28,6 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.pdb
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.xml
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\bin\Debug\Google.Protobuf.xml
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoDisciplinas.resources
+C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\GestaoHorarios.exe.config
+C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.exe
+C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.pdb

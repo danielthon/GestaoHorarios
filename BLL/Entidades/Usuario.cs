@@ -85,13 +85,12 @@ namespace BLL.Entidades
 
         public virtual bool ExisteNoBanco()
         {
-            TUsuario tabela = new TUsuario();
             string[] valoresChave =
             {
                 this.login
             };
 
-            if (tabela.Exists(valoresChave, out this.id_usuario)) //consulta o banco e seta o id se encontrar o registro
+            if ((new TUsuario()).Exists(valoresChave, out this.id_usuario)) //consulta o banco e seta o id se encontrar o registro
                 return true;
             else
                 return false;

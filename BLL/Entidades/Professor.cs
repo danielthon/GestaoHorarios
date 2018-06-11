@@ -20,7 +20,12 @@ namespace BLL.Entidades
 
         public int CompareTo(IDado other)
         {
-            throw new NotSupportedException();
+            Professor aux = (Professor)other;
+            if (aux.nome == this.nome)
+            {
+                return 0;
+            }
+            return -1;
         }
 
         public bool Equals(IDado other)
@@ -105,13 +110,12 @@ namespace BLL.Entidades
 
         public override bool ExisteNoBanco()
         {
-            TProfessor tabela = new TProfessor();
             string[] valoresChave =
             {
                 this.id_usuario.ToString()
             };
 
-            if (tabela.Exists(valoresChave, out this.id_prof)) //consulta o banco e seta o id se encontrar o registro
+            if ((new TProfessor()).Exists(valoresChave, out this.id_prof)) //consulta o banco e seta o id se encontrar o registro
                 return true;
             else
                 return false;
