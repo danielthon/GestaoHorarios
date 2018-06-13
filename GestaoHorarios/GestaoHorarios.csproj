@@ -122,6 +122,9 @@
     <EmbeddedResource Include="Telas\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\ManutencaoDisciplinas.resx">
       <DependentUpon>ManutencaoDisciplinas.cs</DependentUpon>
     </EmbeddedResource>
