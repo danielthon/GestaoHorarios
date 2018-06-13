@@ -16,8 +16,7 @@ namespace DAL.Tabelas
 
             this.camposChave = new string[]
             {
-                "Nome",
-                "Id_Professor"
+                "Nome"
             };
         }
     }

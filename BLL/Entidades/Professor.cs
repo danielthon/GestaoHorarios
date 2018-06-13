@@ -9,14 +9,23 @@ namespace BLL.Entidades
     {
         int id_prof;
 
-        public override string ID { get { return this.id_prof == 0 ? "" : this.id_prof.ToString(); } set { this.id_prof = int.Parse(value); } }
-        public string ID_Usuario { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        //public override string ID { get { return this.id_prof == 0 ? "" : this.id_prof.ToString(); } set { this.id_prof = int.Parse(value); } }
+        public override int ID { get { return this.id_prof; } }
+        //public string ID_Usuario { get { return this.id_usuario == 0 ? "" : this.id_usuario.ToString(); } set { this.id_usuario = int.Parse(value); } }
+        public int ID_Usuario { get { return this.id_usuario; } }
 
-        public Professor(string nome, string login, string senha) : base (nome, login, senha) { }
+        public Professor(string nome, string login, string senha) : base (nome, login, senha) { this.ExisteNoBanco(); } //verifica se existe, se sim, seta o id
+
+        public Professor(int id_prof, int id_usuario) : base(id_usuario) { if (this.ExisteNoBanco()) this.id_prof = id_prof; }
 
         public int CompareTo(IDado other)
         {
-            throw new NotSupportedException();
+            Professor aux = (Professor)other;
+            if (aux.nome == this.nome)
+            {
+                return 0;
+            }
+            return -1;
         }
 
         public bool Equals(IDado other)
@@ -40,10 +49,10 @@ namespace BLL.Entidades
             TProfessor tabelaP = new TProfessor();
             string[] valuesP =
             {
-                this.id.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
             };
 
-            if (this.id == 0) //nao possui id, então 'usuario' ainda nao foi inserido no banco
+            if (this.id_usuario == 0) //nao possui id, então 'usuario' ainda nao foi inserido no banco
             {
                 if (!base.ExisteNoBanco()) //usuario
                 {
@@ -55,7 +64,7 @@ namespace BLL.Entidades
                 }
                 else
                 {
-                    tabelaU.Update(valuesU, this.id);  // ALTERAR
+                    tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR
 
                     if (!this.ExisteNoBanco()) //administrador
                         tabelaP.Insert(valuesP);  // INSERIR
@@ -70,7 +79,7 @@ namespace BLL.Entidades
                 if (this.id_prof == 0)
                     throw new Exception("Banco com lógica corrompida! Usuário encontrado sem especialização (Admin. ou Prof.)");
 
-                tabelaU.Update(valuesU, this.id);  // ALTERAR
+                tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR
                 // *
             }
 
@@ -89,25 +98,24 @@ namespace BLL.Entidades
                 else
                 {
                     tabelaP.Delete(this.id_prof);  // REMOVE
-                    tabelaU.Delete(this.id);        // REMOVE
+                    tabelaU.Delete(this.id_usuario);        // REMOVE
                 }
             }
             else
             {
                 tabelaP.Delete(this.id_prof);  // REMOVE
-                tabelaU.Delete(this.id);        // REMOVE
+                tabelaU.Delete(this.id_usuario);        // REMOVE
             }
         }
 
         public override bool ExisteNoBanco()
         {
-            TProfessor tabela = new TProfessor();
             string[] valoresChave =
             {
-                this.id.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                this.id_usuario.ToString()
             };
 
-            if (tabela.Exists(valoresChave, out this.id_prof)) //consulta o banco e seta o id se encontrar o registro
+            if ((new TProfessor()).Exists(valoresChave, out this.id_prof)) //consulta o banco e seta o id se encontrar o registro
                 return true;
             else
                 return false;

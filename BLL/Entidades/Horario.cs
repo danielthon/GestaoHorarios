@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using DAL.Tabelas;
 using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
     public enum DiaSemana
     {
-        Domingo,
-        Segunda,
-        Terca,
-        Quarta,
-        Quinta,
-        Sexta,
-        Sabado      
+        Domingo = 1,
+        Segunda = 2,
+        Terca = 3,
+        Quarta = 4,
+        Quinta = 5,
+        Sexta = 6,
+        Sabado = 7     
     }
 
     public enum Hora
@@ -28,7 +29,8 @@ namespace BLL.Entidades
         private DiaSemana diaSemana;
         private Hora hora;
 
-        public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        //public string ID { get { return this.id == 0 ? "" : this.id.ToString(); } set { this.id = int.Parse(value); } }
+        public int ID { get { return this.id; } }
         public DiaSemana DiaNaSemana { get { return this.diaSemana; } }
         public Hora Hora { get { return this.hora; } }
 
@@ -36,6 +38,9 @@ namespace BLL.Entidades
         {
             this.diaSemana = dia;
             this.hora = hora;
+
+            this.id = 0;
+            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public int CompareTo(IDado other)
@@ -76,6 +81,22 @@ namespace BLL.Entidades
         public bool ExisteNoBanco()
         {
             throw new NotImplementedException();
+        }
+
+        public bool CarregaAtributos(int id)
+        {
+            DataRow linha = (new THorario()).Select(id.ToString());
+
+            if (linha == null)
+                return false;
+            else
+            {
+                this.id = id;
+                this.hora = DateTime.Parse(linha[1].ToString()) == DateTime.Parse("19:00:00") ? Hora._19h00 : Hora._20h50;
+                this.diaSemana = (DiaSemana)int.Parse(linha[3].ToString());
+
+                return true;
+            }
         }
     }
 }

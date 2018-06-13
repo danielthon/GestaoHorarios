@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestaoHorarios.Telas
 {
-    public partial class Login : Form
+    public partial class Login : FormBase
     {
         public Login()
         {

@@ -7,9 +7,10 @@ using System.Data;
 
 namespace DAL.MySQL
 {
-    internal static class Conexao
+    public static class Conexao
     {
         static private MySqlConnection conn;
+        static private bool transacaoAberta = false;
 
         public static bool SetConexao(string servidor, string bd, out string mensagem)
         {

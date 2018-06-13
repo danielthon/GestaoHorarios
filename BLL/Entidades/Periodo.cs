@@ -7,7 +7,7 @@ using BLL.Estruturas;
 
 namespace BLL.Entidades
 {
-    ´public class Periodo : IEntidade, IDado
+    public class Periodo : IDado
     {
         private int numero;
 
@@ -34,21 +34,6 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
-        }
-
-        public bool ExisteNoBanco()
-        {
-            throw new NotSupportedException();
-        }
-
-        public void RemoverDoBanco()
-        {
-            throw new NotSupportedException();
-        }
-
-        public void SalvarNoBanco()
-        {
-            throw new NotSupportedException();
         }
     }
 }

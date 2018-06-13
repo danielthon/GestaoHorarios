@@ -46,6 +46,15 @@ namespace BLL.Estruturas
             return false;
         }
 
+        public List<Vertice> GetAdjacentes()
+        {
+            List<Vertice> lista = new List<Vertice>();
+
+            foreach (Aresta aresta in this.arestas)
+                lista.Add(aresta.OutraExtremidade(this));
+
+            return lista;
+        }
 
         public void RemoverArestas()
         {
@@ -58,6 +67,20 @@ namespace BLL.Estruturas
             {
                 if (aresta.OutraExtremidade(this).Equals(v))
                     return true;
+            }
+
+            return false;
+        }
+
+        public bool IsAdjacente(List<Vertice> lista)
+        {
+            foreach (Aresta aresta in this.arestas)
+            {
+                foreach (Vertice vertice in lista)
+                {
+                    if (aresta.OutraExtremidade(this).Equals(lista))
+                        return true;
+                }
             }
 
             return false;
