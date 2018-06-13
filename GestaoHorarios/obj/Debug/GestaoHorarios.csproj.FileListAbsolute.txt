@@ -48,3 +48,4 @@ C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoH
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoDisciplinas.resources
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoHorarios.resources
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csproj.GenerateResource.Cache
+C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.Login.resources
