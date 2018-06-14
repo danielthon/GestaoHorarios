@@ -167,7 +167,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(677, 119);
+            this.groupBox1.Size = new System.Drawing.Size(677, 122);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
@@ -188,12 +188,12 @@
             // 
             this.lb_segunda1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_segunda1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_segunda1.Location = new System.Drawing.Point(112, 56);
+            this.lb_segunda1.Location = new System.Drawing.Point(112, 52);
             this.lb_segunda1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_segunda1.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_segunda1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_segunda1.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_segunda1.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_segunda1.Name = "lb_segunda1";
-            this.lb_segunda1.Size = new System.Drawing.Size(100, 20);
+            this.lb_segunda1.Size = new System.Drawing.Size(100, 25);
             this.lb_segunda1.TabIndex = 3;
             this.lb_segunda1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -224,12 +224,12 @@
             // 
             this.lb_segunda2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_segunda2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_segunda2.Location = new System.Drawing.Point(112, 84);
+            this.lb_segunda2.Location = new System.Drawing.Point(112, 83);
             this.lb_segunda2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_segunda2.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_segunda2.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_segunda2.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_segunda2.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_segunda2.Name = "lb_segunda2";
-            this.lb_segunda2.Size = new System.Drawing.Size(100, 20);
+            this.lb_segunda2.Size = new System.Drawing.Size(100, 25);
             this.lb_segunda2.TabIndex = 17;
             this.lb_segunda2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -260,12 +260,12 @@
             // 
             this.lb_terca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_terca1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_terca1.Location = new System.Drawing.Point(224, 56);
+            this.lb_terca1.Location = new System.Drawing.Point(225, 52);
             this.lb_terca1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_terca1.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_terca1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_terca1.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_terca1.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_terca1.Name = "lb_terca1";
-            this.lb_terca1.Size = new System.Drawing.Size(100, 20);
+            this.lb_terca1.Size = new System.Drawing.Size(100, 25);
             this.lb_terca1.TabIndex = 18;
             this.lb_terca1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -286,12 +286,12 @@
             // 
             this.lb_terca2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_terca2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_terca2.Location = new System.Drawing.Point(224, 84);
+            this.lb_terca2.Location = new System.Drawing.Point(225, 82);
             this.lb_terca2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_terca2.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_terca2.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_terca2.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_terca2.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_terca2.Name = "lb_terca2";
-            this.lb_terca2.Size = new System.Drawing.Size(100, 20);
+            this.lb_terca2.Size = new System.Drawing.Size(100, 25);
             this.lb_terca2.TabIndex = 19;
             this.lb_terca2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -312,12 +312,12 @@
             // 
             this.lb_quarta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quarta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quarta1.Location = new System.Drawing.Point(335, 56);
+            this.lb_quarta1.Location = new System.Drawing.Point(335, 52);
             this.lb_quarta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_quarta1.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_quarta1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_quarta1.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_quarta1.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_quarta1.Name = "lb_quarta1";
-            this.lb_quarta1.Size = new System.Drawing.Size(100, 20);
+            this.lb_quarta1.Size = new System.Drawing.Size(100, 25);
             this.lb_quarta1.TabIndex = 20;
             this.lb_quarta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -325,12 +325,12 @@
             // 
             this.lb_quarta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quarta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quarta2.Location = new System.Drawing.Point(335, 84);
+            this.lb_quarta2.Location = new System.Drawing.Point(335, 82);
             this.lb_quarta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_quarta2.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_quarta2.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_quarta2.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_quarta2.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_quarta2.Name = "lb_quarta2";
-            this.lb_quarta2.Size = new System.Drawing.Size(100, 20);
+            this.lb_quarta2.Size = new System.Drawing.Size(100, 25);
             this.lb_quarta2.TabIndex = 21;
             this.lb_quarta2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -338,12 +338,12 @@
             // 
             this.lb_sexta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_sexta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_sexta2.Location = new System.Drawing.Point(561, 84);
+            this.lb_sexta2.Location = new System.Drawing.Point(561, 82);
             this.lb_sexta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_sexta2.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_sexta2.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_sexta2.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_sexta2.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_sexta2.Name = "lb_sexta2";
-            this.lb_sexta2.Size = new System.Drawing.Size(100, 20);
+            this.lb_sexta2.Size = new System.Drawing.Size(100, 25);
             this.lb_sexta2.TabIndex = 25;
             this.lb_sexta2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -351,12 +351,12 @@
             // 
             this.lb_quinta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quinta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quinta1.Location = new System.Drawing.Point(448, 56);
+            this.lb_quinta1.Location = new System.Drawing.Point(448, 52);
             this.lb_quinta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_quinta1.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_quinta1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_quinta1.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_quinta1.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_quinta1.Name = "lb_quinta1";
-            this.lb_quinta1.Size = new System.Drawing.Size(100, 20);
+            this.lb_quinta1.Size = new System.Drawing.Size(100, 25);
             this.lb_quinta1.TabIndex = 22;
             this.lb_quinta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -364,12 +364,12 @@
             // 
             this.lb_sexta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_sexta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_sexta1.Location = new System.Drawing.Point(561, 56);
+            this.lb_sexta1.Location = new System.Drawing.Point(561, 52);
             this.lb_sexta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_sexta1.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_sexta1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_sexta1.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_sexta1.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_sexta1.Name = "lb_sexta1";
-            this.lb_sexta1.Size = new System.Drawing.Size(100, 20);
+            this.lb_sexta1.Size = new System.Drawing.Size(100, 25);
             this.lb_sexta1.TabIndex = 24;
             this.lb_sexta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -377,12 +377,12 @@
             // 
             this.lb_quinta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quinta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quinta2.Location = new System.Drawing.Point(448, 84);
+            this.lb_quinta2.Location = new System.Drawing.Point(448, 82);
             this.lb_quinta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_quinta2.MaximumSize = new System.Drawing.Size(100, 20);
-            this.lb_quinta2.MinimumSize = new System.Drawing.Size(100, 20);
+            this.lb_quinta2.MaximumSize = new System.Drawing.Size(100, 25);
+            this.lb_quinta2.MinimumSize = new System.Drawing.Size(100, 25);
             this.lb_quinta2.Name = "lb_quinta2";
-            this.lb_quinta2.Size = new System.Drawing.Size(100, 20);
+            this.lb_quinta2.Size = new System.Drawing.Size(100, 25);
             this.lb_quinta2.TabIndex = 23;
             this.lb_quinta2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -410,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 353);
+            this.ClientSize = new System.Drawing.Size(712, 361);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label69);

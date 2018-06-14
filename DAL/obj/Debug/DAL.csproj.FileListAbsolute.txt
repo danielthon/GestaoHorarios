@@ -23,3 +23,4 @@ C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\bin
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.pdb
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
