@@ -1,6 +1,9 @@
-﻿namespace BLL.Entidades
+﻿using System.Data;
+using System.Collections.Generic;
+
+namespace BLL.Entidades
 {
-    interface IEntidade
+    public interface IEntidade
     {
         /// <summary>
         /// Insere ou atualiza o registro no banco da entidade respectiva a este objeto.
@@ -22,5 +25,15 @@
         /// </summary>
         /// <returns>Retorna se o registro foi encontrado ou não.</returns>
         bool CarregaAtributos(int id);
+        /// <summary>
+        /// (static) Retorna todos os registros da tabela respectiva.
+        /// </summary>
+        /// <returns></returns>
+        DataTable TodosT();
+        /// <summary>
+        /// (static) Retorna todos os registros da tabela respectiva no formato do objeto.
+        /// </summary>
+        /// <returns></returns>
+        List<IEntidade> Todos();
     }
 }

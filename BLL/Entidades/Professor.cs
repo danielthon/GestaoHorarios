@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DAL.Tabelas;
 using BLL.Estruturas;
+using System.Data;
 
 namespace BLL.Entidades
 {
@@ -16,7 +17,9 @@ namespace BLL.Entidades
 
         public Professor(string nome, string login, string senha) : base (nome, login, senha) { this.ExisteNoBanco(); } //verifica se existe, se sim, seta o id
 
-        public Professor(int id_prof, int id_usuario) : base(id_usuario) { if (this.ExisteNoBanco()) this.id_prof = id_prof; }
+        public Professor(int id_prof, int id_usuario) : base(id_usuario) { /*if (this.ExisteNoBanco())*/ this.id_prof = id_prof; }
+
+        public Professor(int id_usuario, int id_prof, string nome, string login, string senha) : base(id_usuario, nome, login, senha) { this.id_prof = id_prof; }
 
         public int CompareTo(IDado other)
         {
@@ -119,6 +122,21 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public override DataTable TodosT()
+        {
+            return (new TProfessor()).SelectJoinUsuario();
+        }
+
+        public override List<IEntidade> Todos()
+        {
+            List<IEntidade> lista = new List<IEntidade>();
+
+            foreach (DataRow dr in TodosT().Rows)
+                lista.Add(new Professor(int.Parse(dr[0].ToString()), int.Parse(dr[1].ToString()), dr[2].ToString(), dr[3].ToString(), dr[4].ToString()));
+
+            return lista;
         }
     }
 }

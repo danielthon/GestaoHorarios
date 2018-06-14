@@ -33,6 +33,16 @@ namespace BLL.Entidades
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
+        public Disciplina(int id, string nome, int id_professor, int periodo/*, int qtdSemana*/)
+        {
+            this.nome = nome;
+            this.id_professor = id_professor;
+            this.periodo = periodo;
+            //this.qtdSemana = qtdSemana;
+
+            this.id = id;
+        }
+
         public Disciplina(int id) { this.CarregaAtributos(id); }
 
         public int CompareTo(IDado other)
@@ -78,6 +88,21 @@ namespace BLL.Entidades
 
                 return true;
             }
+        }
+
+        public DataTable TodosT()
+        {
+            return (new TDisciplina()).SelectAll();
+        }
+
+        public List<IEntidade> Todos()
+        {
+            List<IEntidade> lista = new List<IEntidade>();
+
+            foreach (DataRow dr in TodosT().Rows)
+                lista.Add(new Disciplina(int.Parse(dr[0].ToString()), dr[1].ToString(), int.Parse(dr[2].ToString()), int.Parse(dr[3].ToString())));
+
+            return lista;
         }
     }
 }

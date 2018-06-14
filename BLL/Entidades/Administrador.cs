@@ -16,7 +16,9 @@ namespace BLL.Entidades
 
         public Administrador(string nome, string login, string senha) : base (nome, login, senha) { }
 
-        public Administrador(int id_admin, int id_usuario) : base(id_usuario) { if (this.ExisteNoBanco()) this.id_admin = id_admin; }
+        public Administrador(int id_admin, int id_usuario) : base(id_usuario) { /*if (this.ExisteNoBanco())*/ this.id_admin = id_admin; }
+
+        public Administrador(int id_usuario, int id_admin, string nome, string login, string senha) : base(id_usuario, nome, login, senha) { this.id_admin = id_admin; }
 
         public override void SalvarNoBanco()
         {
@@ -101,6 +103,21 @@ namespace BLL.Entidades
                 return true;
             else
                 return false;
+        }
+
+        public override DataTable TodosT()
+        {
+            return (new TAdministrador()).SelectJoinUsuario();
+        }
+
+        public override List<IEntidade> Todos()
+        {
+            List<IEntidade> lista = new List<IEntidade>();
+
+            foreach (DataRow dr in TodosT().Rows)
+                lista.Add(new Administrador(int.Parse(dr[0].ToString()), int.Parse(dr[1].ToString()), dr[2].ToString(), dr[3].ToString(), dr[4].ToString()));
+
+            return lista;
         }
     }
 }

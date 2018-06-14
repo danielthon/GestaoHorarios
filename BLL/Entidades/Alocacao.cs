@@ -28,6 +28,13 @@ namespace BLL.Entidades
 
         public Alocacao(int id) { this.CarregaAtributos(id); }
 
+        public Alocacao(int id, int id_disciplina, int id_horario)
+        {
+            this.id = id;
+            this.id_disciplina = id_disciplina;
+            this.id_horario = id_horario;
+        }
+
         public void SalvarNoBanco()
         {
             throw new NotImplementedException();
@@ -66,6 +73,21 @@ namespace BLL.Entidades
 
                 return true;
             }
+        }
+
+        public DataTable TodosT()
+        {
+            return (new TAlocacao()).SelectAll();
+        }
+
+        public List<IEntidade> Todos()
+        {
+            List<IEntidade> lista = new List<IEntidade>();
+
+            foreach (DataRow dr in TodosT().Rows)
+                lista.Add(new Alocacao(int.Parse(dr[0].ToString()), int.Parse(dr[1].ToString()), int.Parse(dr[2].ToString())));
+
+            return lista;
         }
     }
 }

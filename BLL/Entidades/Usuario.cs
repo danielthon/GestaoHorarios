@@ -25,12 +25,22 @@ namespace BLL.Entidades
             this.login = login;
             this.senha = senha;
 
+            this.id_usuario = 0;
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public Usuario(int id)
         {
             this.CarregaAtributos(id);
+        }
+
+        public Usuario(int id, string nome, string login, string senha)
+        {
+            this.nome = nome;
+            this.login = login;
+            this.senha = senha;
+
+            this.id_usuario = id;
         }
 
         public abstract void SalvarNoBanco();
@@ -112,5 +122,9 @@ namespace BLL.Entidades
                 return true;
             }
         }
+
+        public abstract DataTable TodosT();
+
+        public abstract List<IEntidade> Todos();
     }
 }

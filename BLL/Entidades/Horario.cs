@@ -43,6 +43,14 @@ namespace BLL.Entidades
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
+        public Horario(int id, DiaSemana dia, Hora hora)
+        {
+            this.diaSemana = dia;
+            this.hora = hora;
+
+            this.id = id;
+        }
+
         public int CompareTo(IDado other)
         {
             if (this.diaSemana < ((Horario)other).diaSemana)
@@ -97,6 +105,26 @@ namespace BLL.Entidades
 
                 return true;
             }
+        }
+
+        public DataTable TodosT()
+        {
+            return (new THorario()).SelectAll();
+        }
+
+        public List<IEntidade> Todos()
+        {
+            List<IEntidade> lista = new List<IEntidade>();
+
+            foreach (DataRow dr in TodosT().Rows)
+            {
+                Hora hora = DateTime.Parse(dr[1].ToString()) == DateTime.Parse("19:00:00") ? Hora._19h00 : Hora._20h50;
+                DiaSemana diaSemana = (DiaSemana)int.Parse(dr[3].ToString());
+
+                lista.Add(new Horario(int.Parse(dr[0].ToString()), diaSemana, hora));
+            }
+
+            return lista;
         }
     }
 }

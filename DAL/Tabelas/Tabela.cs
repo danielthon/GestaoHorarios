@@ -11,6 +11,8 @@ namespace DAL.Tabelas
         protected string[] campos;
         protected string[] camposChave;
 
+        public string getNomeTabela { get { return this.tabela; } }
+
         /// <summary>
         /// Retorna o nome das colunas da respectiva tabela no banco de dados
         /// </summary>
@@ -48,6 +50,11 @@ namespace DAL.Tabelas
         public DataRow Select(string id)
         {
             return Conexao.ExecutaComandoSQL_Linha(string.Format("SELECT * FROM {0} WHERE id={1};", tabela, id));
+        }
+
+        public DataTable SelectWhere(string where)
+        {
+            return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} {1};", tabela, where));
         }
 
         public string Select(string campo, int id)
