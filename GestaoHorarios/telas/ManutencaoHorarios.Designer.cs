@@ -30,16 +30,18 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbHorarioEscolhido = new System.Windows.Forms.Label();
+            this.btGravar = new System.Windows.Forms.Button();
             this.cbDisciplina = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbExibeProfessor = new System.Windows.Forms.Label();
-            this.btGravar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_segunda1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.lb_segunda2 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_terca1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.lb_sexta1 = new System.Windows.Forms.Label();
             this.lb_quinta2 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
             this.cbPeriodo = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -87,8 +87,19 @@
             this.lbHorarioEscolhido.Size = new System.Drawing.Size(150, 19);
             this.lbHorarioEscolhido.TabIndex = 31;
             // 
+            // btGravar
+            // 
+            this.btGravar.Location = new System.Drawing.Point(400, 39);
+            this.btGravar.Margin = new System.Windows.Forms.Padding(2);
+            this.btGravar.Name = "btGravar";
+            this.btGravar.Size = new System.Drawing.Size(87, 35);
+            this.btGravar.TabIndex = 39;
+            this.btGravar.Text = "GRAVAR";
+            this.btGravar.UseVisualStyleBackColor = true;
+            // 
             // cbDisciplina
             // 
+            this.cbDisciplina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDisciplina.FormattingEnabled = true;
             this.cbDisciplina.Location = new System.Drawing.Point(32, 49);
             this.cbDisciplina.Margin = new System.Windows.Forms.Padding(2);
@@ -132,16 +143,6 @@
             this.lbExibeProfessor.Size = new System.Drawing.Size(150, 17);
             this.lbExibeProfessor.TabIndex = 31;
             this.lbExibeProfessor.Text = "zzzzzzzzz";
-            // 
-            // btGravar
-            // 
-            this.btGravar.Location = new System.Drawing.Point(400, 39);
-            this.btGravar.Margin = new System.Windows.Forms.Padding(2);
-            this.btGravar.Name = "btGravar";
-            this.btGravar.Size = new System.Drawing.Size(87, 35);
-            this.btGravar.TabIndex = 39;
-            this.btGravar.Text = "GRAVAR";
-            this.btGravar.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -209,6 +210,16 @@
             this.label5.Text = "SEXTA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(10, 86);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(91, 17);
+            this.label67.TabIndex = 36;
+            this.label67.Text = "20h50 - 22h30";
+            // 
             // lb_segunda2
             // 
             this.lb_segunda2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -221,6 +232,16 @@
             this.lb_segunda2.Size = new System.Drawing.Size(100, 20);
             this.lb_segunda2.TabIndex = 17;
             this.lb_segunda2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(9, 58);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(91, 17);
+            this.label68.TabIndex = 35;
+            this.label68.Text = "19h00 - 20h30";
             // 
             // label4
             // 
@@ -375,28 +396,9 @@
             this.label69.TabIndex = 37;
             this.label69.Text = "Período";
             // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(10, 86);
-            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(91, 17);
-            this.label67.TabIndex = 36;
-            this.label67.Text = "20h50 - 22h30";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(9, 58);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(91, 17);
-            this.label68.TabIndex = 35;
-            this.label68.Text = "19h00 - 20h30";
-            // 
             // cbPeriodo
             // 
+            this.cbPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPeriodo.FormattingEnabled = true;
             this.cbPeriodo.Location = new System.Drawing.Point(350, 62);
             this.cbPeriodo.Margin = new System.Windows.Forms.Padding(2);

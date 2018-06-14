@@ -106,6 +106,9 @@
     <Compile Include="Telas\PerfilUsuario.Designer.cs">
       <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\ConsultaHorarios.resx">
+      <DependentUpon>ConsultaHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\ManutencaoHorarios.resx">
       <DependentUpon>ManutencaoHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ManutencaoUsuarios.resx">
+      <DependentUpon>ManutencaoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\PerfilUsuario.resx">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

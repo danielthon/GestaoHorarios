@@ -16,5 +16,10 @@ namespace GestaoHorarios.Telas
         {
             InitializeComponent();
         }
+
+        private void PerfilUsuario_Load(object sender, EventArgs e)
+        {
+            lb_titulo.Text = "Configuração de Perfil";
+        }
     }
 }

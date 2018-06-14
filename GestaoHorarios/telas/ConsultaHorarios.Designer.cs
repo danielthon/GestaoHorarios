@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ConsultaHorarios
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(332, 344);
+            this.Name = "ConsultaHorarios";
             this.Text = "ConsultaHorarios";
+            this.Load += new System.EventHandler(this.ConsultaHorarios_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

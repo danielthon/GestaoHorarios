@@ -16,5 +16,10 @@ namespace GestaoHorarios.Telas
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            lb_titulo.Text = "";
+        }
     }
 }

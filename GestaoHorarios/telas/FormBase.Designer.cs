@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
             this.pnHeader = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
+            this.lb_titulo = new System.Windows.Forms.Label();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
@@ -38,6 +39,7 @@
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.Black;
+            this.pnHeader.Controls.Add(this.lb_titulo);
             this.pnHeader.Controls.Add(this.picClose);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
@@ -66,6 +68,17 @@
             this.picClose.MouseLeave += new System.EventHandler(this.picClose_MouseLeave);
             this.picClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picClose_MouseMove);
             // 
+            // lb_titulo
+            // 
+            this.lb_titulo.AutoSize = true;
+            this.lb_titulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_titulo.ForeColor = System.Drawing.Color.White;
+            this.lb_titulo.Location = new System.Drawing.Point(13, 11);
+            this.lb_titulo.Name = "lb_titulo";
+            this.lb_titulo.Size = new System.Drawing.Size(101, 17);
+            this.lb_titulo.TabIndex = 1;
+            this.lb_titulo.Text = "Título do Form";
+            // 
             // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -83,6 +96,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormBase";
             this.pnHeader.ResumeLayout(false);
+            this.pnHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
@@ -92,5 +106,6 @@
 
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.PictureBox picClose;
+        protected System.Windows.Forms.Label lb_titulo;
     }
 }

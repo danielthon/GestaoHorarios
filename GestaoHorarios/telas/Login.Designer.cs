@@ -99,6 +99,7 @@
             this.Controls.Add(this.tbUsuario);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.Controls.SetChildIndex(this.tbUsuario, 0);
             this.Controls.SetChildIndex(this.tbSenhaUsuario, 0);
             this.Controls.SetChildIndex(this.btLogin, 0);

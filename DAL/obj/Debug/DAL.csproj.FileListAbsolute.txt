@@ -20,6 +20,6 @@ C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\bin
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\bin\Debug\MySql.Data.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\bin\Debug\Google.Protobuf.xml
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\bin\Debug\MySql.Data.xml
-C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.pdb
+C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

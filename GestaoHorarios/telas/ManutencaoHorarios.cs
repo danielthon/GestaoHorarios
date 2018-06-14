@@ -36,6 +36,7 @@ namespace GestaoHorarios.Telas
 
         private void ManutencaoHorarios_Load(object sender, EventArgs e)
         {
+            lb_titulo.Text = "Alocação de Horários";
             lbExibeProfessor.Text = "";
         }
 

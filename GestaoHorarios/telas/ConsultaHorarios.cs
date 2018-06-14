@@ -16,5 +16,10 @@ namespace GestaoHorarios.Telas
         {
             InitializeComponent();
         }
+
+        private void ConsultaHorarios_Load(object sender, EventArgs e)
+        {
+            lb_titulo.Text = "Horários";
+        }
     }
 }
