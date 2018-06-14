@@ -29,6 +29,15 @@ namespace BLL.Entidades
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
+        public Usuario(string login, string senha)
+        {
+            this.login = login;
+            this.senha = senha;
+
+            this.id_usuario = 0;
+            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
+        }
+
         public Usuario(int id)
         {
             this.CarregaAtributos(id);
@@ -126,5 +135,11 @@ namespace BLL.Entidades
         public abstract DataTable TodosT();
 
         public abstract List<IEntidade> Todos();
+
+
+        public bool SenhaCorreta()
+        {
+            return (new TUsuario()).Select("senha", this.id_usuario) == this.senha;
+        }
     }
 }
