@@ -66,7 +66,7 @@ namespace GestaoHorarios.Telas
 
             Label clicado = (Label)sender;
 
-            clicado.BackColor = Color.Cyan;
+            clicado.BackColor = Color.Turquoise;
             if (clicado.Text != "")
             {
                 this.groupBox2.Enabled = true;
@@ -100,6 +100,10 @@ namespace GestaoHorarios.Telas
                 case 9:
                     lbHorarioEscolhido.Text = "6ª Feira - Segundo Horário"; break;
             }
+
+            cbDisciplina.SelectedIndex = -1;
+            lbExibeProfessor.Text = "";
+            btGravar.Enabled = false;
         }
 
         private void cbPeriodo_SelectedValueChanged(object sender, EventArgs e)
@@ -124,6 +128,26 @@ namespace GestaoHorarios.Telas
                 cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
 
             this.groupBox1.Enabled = true;
+        }
+
+        private void cbDisciplina_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbDisciplina.SelectedIndex != -1)
+            {
+                Disciplina aux = new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0);
+
+                lbExibeProfessor.Text = ((Professor)Manager.GetProfessorDeDisciplina(Manager.GetVerticeNaGrade(aux)).GetDado).Nome;
+
+                btGravar.Enabled = true;
+            }
+        }
+
+        private void btGravar_Click(object sender, EventArgs e)
+        {
+            Vertice vd = Manager.GetVerticeNaGrade(new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0));
+            //Vertice vh = Manager.GetVerticeNaGrade(p);
+
+            //if(Manager.TentarAlocar()
         }
     }
 }

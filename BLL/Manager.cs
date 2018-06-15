@@ -129,6 +129,30 @@ namespace BLL
             return disciplina;
         }
 
+        public static Vertice GetProfessorDeDisciplina(Vertice disciplina)
+        {
+            foreach (Vertice v in disciplina.GetAdjacentes())
+            {
+                if (v.GetDado.GetType() == typeof(Professor))
+                    return v;
+            }
+
+            return null;
+        }
+
+        public static Vertice GetVerticeNaGrade(IDado dado)
+        {
+            foreach(Vertice v in Grade.Vertices)
+            {
+                if (dado.Equals(v.GetDado))
+                    return v;
+            }
+
+            return null;
+        }
+
+        //public static Vertice 
+
         public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina, out Alocacao alocacao)
         {
             alocacao = null;

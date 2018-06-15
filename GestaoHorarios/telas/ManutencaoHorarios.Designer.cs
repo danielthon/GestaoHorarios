@@ -96,6 +96,7 @@
             this.btGravar.TabIndex = 39;
             this.btGravar.Text = "GRAVAR";
             this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
             // cbDisciplina
             // 
@@ -106,6 +107,7 @@
             this.cbDisciplina.Name = "cbDisciplina";
             this.cbDisciplina.Size = new System.Drawing.Size(182, 25);
             this.cbDisciplina.TabIndex = 34;
+            this.cbDisciplina.SelectedValueChanged += new System.EventHandler(this.cbDisciplina_SelectedValueChanged);
             // 
             // label7
             // 
