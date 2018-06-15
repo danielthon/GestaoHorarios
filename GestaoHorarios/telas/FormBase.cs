@@ -33,7 +33,9 @@ namespace GestaoHorarios.Telas
             if (e.Button != MouseButtons.Left)
                 return;
 
-            mouseClicked = true;
+            if(this.GetType() != typeof(Login))
+                mouseClicked = true;
+
             clickedAt = this.PointToClient(MousePosition);
             //clickedAt.X += 7;
             //clickedAt.Y += 28;

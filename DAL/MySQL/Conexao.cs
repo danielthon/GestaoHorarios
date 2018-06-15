@@ -15,9 +15,9 @@ namespace DAL.MySQL
         public static bool SetConexao(string servidor, string bd, out string mensagem)
         {
             StringBuilder str = new StringBuilder();
-            str.Append("Server=" + servidor); //padrão = "localhost"
-            str.Append(";Database=" + bd);
-            str.Append(";Uid=root");
+            str.Append("server=" + servidor); //padrão = "localhost"
+            str.Append(";database=" + bd);
+            str.Append(";uid=root");
             str.Append(";Pwd=");
 
             conn = new MySqlConnection(str.ToString());
@@ -36,10 +36,10 @@ namespace DAL.MySQL
                 try
                 {
                     str = new StringBuilder();
-                    str.Append("Server=" + servidor);
-                    str.Append(";Database=mysql");
-                    str.Append(";Uid=root");
-                    str.Append(";Pwd=");
+                    str.Append("server=" + servidor);
+                    str.Append(";database=mysql");
+                    str.Append(";uid=root");
+                    str.Append(";pwd=");
 
                     conn = new MySqlConnection(str.ToString());
 

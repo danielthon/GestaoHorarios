@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.lb_titulo = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,17 @@
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.form_MouseMove);
             this.pnHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.form_MouseUp);
             // 
+            // lb_titulo
+            // 
+            this.lb_titulo.AutoSize = true;
+            this.lb_titulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_titulo.ForeColor = System.Drawing.Color.White;
+            this.lb_titulo.Location = new System.Drawing.Point(13, 11);
+            this.lb_titulo.Name = "lb_titulo";
+            this.lb_titulo.Size = new System.Drawing.Size(101, 17);
+            this.lb_titulo.TabIndex = 1;
+            this.lb_titulo.Text = "Título do Form";
+            // 
             // picClose
             // 
             this.picClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -68,17 +79,6 @@
             this.picClose.MouseLeave += new System.EventHandler(this.picClose_MouseLeave);
             this.picClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picClose_MouseMove);
             // 
-            // lb_titulo
-            // 
-            this.lb_titulo.AutoSize = true;
-            this.lb_titulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_titulo.ForeColor = System.Drawing.Color.White;
-            this.lb_titulo.Location = new System.Drawing.Point(13, 11);
-            this.lb_titulo.Name = "lb_titulo";
-            this.lb_titulo.Size = new System.Drawing.Size(101, 17);
-            this.lb_titulo.TabIndex = 1;
-            this.lb_titulo.Text = "Título do Form";
-            // 
             // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -93,7 +93,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FormBase";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBase";
             this.pnHeader.ResumeLayout(false);
             this.pnHeader.PerformLayout();

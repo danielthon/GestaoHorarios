@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using BLL.Entidades;
 using BLL.Estruturas;
 using DAL.Tabelas;
+using DAL.MySQL;
 using System.Data;
 
 namespace BLL
 {
-    class Manager
+    public static class Manager
     {
         public static Grafo grade;
 
@@ -122,6 +123,11 @@ namespace BLL
 
                 return true;
             }
+        }
+
+        public static bool AbrirConexao(out string mensagemErro)
+        {
+            return Conexao.SetConexao("localhost", "sga", out mensagemErro);
         }
     }
 }

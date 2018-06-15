@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using BLL.Entidades;
 
 namespace GestaoHorarios.Telas
 {
@@ -21,33 +23,69 @@ namespace GestaoHorarios.Telas
 
         private void Login_Load(object sender, EventArgs e)
         {
+            // CONEXAO
+
+            string erro;
+            while (!Manager.AbrirConexao(out erro))
+            {
+                DialogResult dr = MessageBox.Show(erro, "Erro de conexão", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                if (dr == DialogResult.Cancel)
+                {
+                    Application.Exit();
+                    break;
+                }
+            }
+
+            // FIM CONEXAO
+
             lb_titulo.Text = "";
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            BLL.Entidades.Administrador admin = new BLL.Entidades.Administrador(tbUsuario.Text, tbSenhaUsuario.Text);
+            Administrador admin = new Administrador(tbUsuario.Text, tbSenhaUsuario.Text);
+
             if (admin.ID_Usuario == 0)
             {
-                BLL.Entidades.Professor prof = new BLL.Entidades.Professor(tbUsuario.Text, tbSenhaUsuario.Text);
+                Professor prof = new Professor(tbUsuario.Text, tbSenhaUsuario.Text);
+
                 if (prof.ID_Usuario == 0)
                 {
                     tbSenhaUsuario.Clear();
                     tbUsuario.Clear();
-                    lbErroLogin.Visible = true;
+
+                    MessageBox.Show("Login incorreto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                    //lbErroLogin.Visible = true;
                 }
                 else
                 {
-                    if (prof.SenhaCorreta() == true)
+                    if (prof.SenhaCorreta())
                     {
-                        Home.ActiveForm.Visible = true;
+                        (new Home(prof)).Show();
+                        this.Close();
                     }
-
+                    else
+                    {
+                        tbSenhaUsuario.Clear();
+                        MessageBox.Show("Senha incorreta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    }
+                       
                 }
             }
             else
             {
-                admin.SenhaCorreta();
+                if (admin.SenhaCorreta())
+                {
+                    (new Home(admin)).Show();
+                    this.Close();
+                }
+                else
+                {
+                    tbSenhaUsuario.Clear();
+                    MessageBox.Show("Senha incorreta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }
             }
         }
 
