@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.Arquivo;
 
 namespace GestaoHorarios.Telas
 {
@@ -20,6 +21,11 @@ namespace GestaoHorarios.Telas
         private void ManutencaoDisciplinas_Load(object sender, EventArgs e)
         {
             lb_titulo.Text = "Manutenção de Disciplinas";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LeituraArquivo.LerAquivo("ArquivoEntrada.txt", ' ');
         }
     }
 }

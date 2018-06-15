@@ -405,6 +405,7 @@
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(50, 25);
             this.cbPeriodo.TabIndex = 34;
+            this.cbPeriodo.SelectedValueChanged += new System.EventHandler(this.cbPeriodo_SelectedValueChanged);
             // 
             // ManutencaoHorarios
             // 

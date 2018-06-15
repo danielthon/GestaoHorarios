@@ -34,7 +34,15 @@ namespace DAL.Tabelas
                 if (value == "" || value == null)
                     str.Append(",null");
                 else
-                    str.Append("," + value);
+                {
+                    int aux;
+
+                    if(int.TryParse(value, out aux))
+                        str.Append("," + aux);
+                    else
+                        str.Append(",'" + value + "'");
+                }
+                    
             }
 
             str.Append(");");
@@ -77,7 +85,14 @@ namespace DAL.Tabelas
                 if (values[i] == "" || values[i] == null)
                     str.AppendFormat("{0}=null", campos[i]);
                 else
-                    str.AppendFormat("{0}={1}", campos[i], values[i]);
+                {
+                    int aux;
+
+                    if (int.TryParse(values[i], out aux))
+                        str.AppendFormat("{0}={1}", camposChave[i], aux);
+                    else
+                        str.AppendFormat("{0}='{1}'", campos[i], values[i]);
+                }
             }
 
             Conexao.ExecutaComandoSQL_SemRetorno(string.Format("UPDATE {0} SET {1} WHERE id={2};", tabela, str.ToString(), id));

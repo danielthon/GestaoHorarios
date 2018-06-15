@@ -60,7 +60,26 @@ namespace BLL.Entidades
 
         public void SalvarNoBanco()
         {
-            throw new NotImplementedException();
+            TDisciplina tabela = new TDisciplina();
+
+            string[] values =
+            {
+                this.periodo.ToString(),
+                this.nome,
+                this.id_professor.ToString()
+            };
+
+            if (this.id == 0) //nao possui id, então 'usuario' ainda nao foi inserido no banco
+            {
+                tabela.Insert(values);  // INSERIR
+
+                if (!this.ExisteNoBanco()) //usuario
+                    throw new Exception("Dado não inserido no banco!");
+            }
+            else
+            {
+                tabela.Update(values, this.id);  // ALTERAR
+            }
         }
 
         public void RemoverDoBanco()
@@ -70,7 +89,15 @@ namespace BLL.Entidades
 
         public bool ExisteNoBanco()
         {
-            throw new NotImplementedException();
+            string[] valoresChave =
+            {
+                this.nome
+            };
+
+            if ((new TDisciplina()).Exists(valoresChave, out this.id)) //consulta o banco e seta o id se encontrar o registro
+                return true;
+            else
+                return false;
         }
 
         public bool CarregaAtributos(int id)

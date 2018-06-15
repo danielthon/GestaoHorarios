@@ -66,9 +66,18 @@ namespace BLL.Entidades
                 if (!base.ExisteNoBanco()) //usuario
                 {
                     tabelaU.Insert(valuesU);  // INSERIR
-                    tabelaP.Insert(valuesP);  // INSERIR
 
                     if (!base.ExisteNoBanco()) //usuario
+                        throw new Exception("Dado não inserido no banco!");
+
+                    valuesP = new string[]
+                    {
+                        this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                    };
+
+                    tabelaP.Insert(valuesP);  // INSERIR
+
+                    if (!this.ExisteNoBanco()) //usuario
                         throw new Exception("Dado não inserido no banco!");
                 }
                 else
@@ -76,8 +85,13 @@ namespace BLL.Entidades
                     tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR
 
                     if (!this.ExisteNoBanco()) //administrador
+                    {
+                        valuesP = new string[]
+                        {
+                            this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                        };
                         tabelaP.Insert(valuesP);  // INSERIR
-                                                  // *
+                    }                                                 // *
 
                     if (!this.ExisteNoBanco()) //administrador
                         throw new Exception("Dado não inserido no banco!");

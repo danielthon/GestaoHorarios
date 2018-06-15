@@ -29,5 +29,12 @@ namespace GestaoHorarios.Telas
             childForm.MdiParent = this;
             childForm.Show();
         }
+
+        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManutencaoDisciplinas childForm = new ManutencaoDisciplinas();
+            childForm.MdiParent = this;
+            childForm.Show();
+        }
     }
 }

@@ -52,7 +52,7 @@
             this.menuAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuAdmin.Name = "menuAdmin";
             this.menuAdmin.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuAdmin.Size = new System.Drawing.Size(1010, 33);
+            this.menuAdmin.Size = new System.Drawing.Size(1010, 27);
             this.menuAdmin.TabIndex = 1;
             this.menuAdmin.Text = "menuStrip1";
             // 
@@ -63,26 +63,27 @@
             this.disciplinasToolStripMenuItem,
             this.usuáriosToolStripMenuItem});
             this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
-            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(118, 27);
+            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
             this.manutençãoToolStripMenuItem.Text = "Manutenção";
             // 
             // alocaçãoDeHoráriosToolStripMenuItem
             // 
             this.alocaçãoDeHoráriosToolStripMenuItem.Name = "alocaçãoDeHoráriosToolStripMenuItem";
-            this.alocaçãoDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
+            this.alocaçãoDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.alocaçãoDeHoráriosToolStripMenuItem.Text = "Alocação de Horários";
             this.alocaçãoDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.alocaçãoDeHoráriosToolStripMenuItem_Click);
             // 
             // disciplinasToolStripMenuItem
             // 
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
+            this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(248, 28);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // meuPerfilToolStripMenuItem
@@ -90,24 +91,24 @@
             this.meuPerfilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.meuPerfilToolStripMenuItem1});
             this.meuPerfilToolStripMenuItem.Name = "meuPerfilToolStripMenuItem";
-            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(124, 27);
+            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(98, 21);
             this.meuPerfilToolStripMenuItem.Text = "Configuração";
             // 
             // meuPerfilToolStripMenuItem1
             // 
             this.meuPerfilToolStripMenuItem1.Name = "meuPerfilToolStripMenuItem1";
-            this.meuPerfilToolStripMenuItem1.Size = new System.Drawing.Size(163, 28);
+            this.meuPerfilToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.meuPerfilToolStripMenuItem1.Text = "Meu perfil";
             // 
             // xToolStripMenuItem
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(30, 27);
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 21);
             this.xToolStripMenuItem.Text = "x";
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoHorarios.Properties.Resources.bg01;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

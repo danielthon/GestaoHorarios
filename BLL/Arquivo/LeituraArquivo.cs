@@ -9,7 +9,7 @@ using BLL.Estruturas;
 
 namespace BLL.Arquivo
 {
-    internal static class LeituraArquivo
+    public static class LeituraArquivo
     {
         static private List<IDado[]> matrizDados;
 
@@ -50,9 +50,9 @@ namespace BLL.Arquivo
 
             conteudoArq = texto.Split('\n');
 
-            PreencherMatriz(conteudoArq, caractereSeparador);
-
             read.Close();
+
+            PreencherMatriz(conteudoArq, caractereSeparador);
 
             return matrizDados;
         }
@@ -87,11 +87,13 @@ namespace BLL.Arquivo
 
                 // DISCIPLINA
 
-                vetorAux[0] = (IDado)new Disciplina(dadosLinha[0], ((Professor)vetorAux[1]).ID, int.Parse(dadosLinha[3]));
+                vetorAux[0] = (IDado)new Disciplina(dadosLinha[0], ((Professor)vetorAux[1]).ID, int.Parse(dadosLinha[2]));
                 ((Disciplina)vetorAux[0]).SalvarNoBanco();
-                
 
-                matrizDados.Add(vetorAux);
+                for (int j = 0; j < int.Parse(dadosLinha[3]); j++) // qtdNaSemana
+                {
+                    matrizDados.Add(vetorAux);
+                }
 
                 vetorAux = new IDado[quantLinhas];
             }
@@ -100,7 +102,7 @@ namespace BLL.Arquivo
         static private Professor ProcurarProfessor(string nomeProf)
         {
             Professor profAux = null;
-            Professor profBusca = new Professor(nomeProf, "", "");
+            Professor profBusca = new Professor(nomeProf.ToLower(), "");
 
             if (matrizDados.Count > 0)
             {
