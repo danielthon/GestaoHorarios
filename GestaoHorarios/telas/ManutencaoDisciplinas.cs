@@ -29,6 +29,10 @@ namespace GestaoHorarios.Telas
 
             LeituraArquivo.LerAquivo("ArquivoEntrada.txt", ' ');
 
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //if (ofd.ShowDialog() == DialogResult.OK)
+            //    LeituraArquivo.LerAquivo(ofd.FileName, ' ');
+
             MessageBox.Show("Importação finalizada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
             Cursor.Current = Cursors.Default;

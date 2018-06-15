@@ -17,22 +17,22 @@ namespace BLL
 
         public static Grafo Grade { get { return grade; } }
 
-        public static void CarregarGrafoPeloArquivo(IDado[,] matriz)
-        {
-            for (int i = 0; i < matriz.GetLength(0); i++)
-            {
-                Vertice disc = new Vertice(matriz[i, 0]);
-                Vertice prof = new Vertice(matriz[i, 1]);
-                Vertice peri = new Vertice(matriz[i, 2]);
+        //public static void CarregarGrafoPeloArquivo(IDado[,] matriz)
+        //{
+        //    for (int i = 0; i < matriz.GetLength(0); i++)
+        //    {
+        //        Vertice disc = new Vertice(matriz[i, 0]);
+        //        Vertice prof = new Vertice(matriz[i, 1]);
+        //        Vertice peri = new Vertice(matriz[i, 2]);
 
-                grade.AddVertice(disc);
-                grade.AddVertice(prof);
-                grade.AddVertice(peri);
+        //        grade.AddVertice(disc);
+        //        grade.AddVertice(prof);
+        //        grade.AddVertice(peri);
 
-                grade.AddAresta(new Aresta(disc, prof));
-                grade.AddAresta(new Aresta(disc, peri));
-            }
-        }
+        //        grade.AddAresta(new Aresta(disc, prof));
+        //        grade.AddAresta(new Aresta(disc, peri));
+        //    }
+        //}
 
         public static void CarregarGrafoPeloBanco()
         {
@@ -104,6 +104,29 @@ namespace BLL
                     }
                 }
             }
+        }
+
+        public static List<Vertice> GetPeriodos()
+        {
+            List<Vertice> periodos = new List<Vertice>();
+
+            foreach (Vertice v in grade.Vertices)
+            {
+                if (v.GetDado.GetType() == typeof(Periodo))
+                    periodos.Add(v);
+            }
+
+            return periodos;
+        }
+
+        public static List<Vertice> GetDisciplinasPorPeriodo(Vertice periodo)
+        {
+            List<Vertice> disciplina = new List<Vertice>();
+
+            foreach (Vertice v in periodo.GetAdjacentes())
+                disciplina.Add(v);
+
+            return disciplina;
         }
 
         public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina, out Alocacao alocacao)

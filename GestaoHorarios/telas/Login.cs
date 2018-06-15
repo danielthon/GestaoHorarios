@@ -44,6 +44,9 @@ namespace GestaoHorarios.Telas
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            if (tbUsuario.Text == "")
+                return;
+
             Administrador admin = new Administrador(tbUsuario.Text, tbSenhaUsuario.Text);
 
             if (admin.ID_Usuario == 0)
@@ -74,6 +77,8 @@ namespace GestaoHorarios.Telas
                     {
                         tbSenhaUsuario.Clear();
                         MessageBox.Show("Senha incorreta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+
+                        tbSenhaUsuario.Focus();
                     }
                        
                 }

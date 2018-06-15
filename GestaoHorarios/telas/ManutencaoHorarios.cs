@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using BLL.Entidades;
+using BLL.Estruturas;
 
 namespace GestaoHorarios.Telas
 {
@@ -35,8 +36,8 @@ namespace GestaoHorarios.Telas
             foreach (Label lb in lb_Horarios)
                 lb.Click += Click_lb_Horario;
 
-            this.cbPeriodo.Items.Add("teste");
-            this.cbDisciplina.Items.Add("teset2");
+            //this.cbPeriodo.Items.Add("teste");
+            //this.cbDisciplina.Items.Add("teset2");
 
             this.groupBox1.Enabled = false;
             this.cbDisciplina.Enabled = false;
@@ -49,6 +50,11 @@ namespace GestaoHorarios.Telas
             lbExibeProfessor.Text = "";
 
             Manager.CarregarGrafoPeloBanco();
+
+            List<Vertice> periodos = Manager.GetPeriodos();
+
+            foreach(Vertice v in periodos)
+                cbPeriodo.Items.Add(((Periodo)v.GetDado).Numero);
         }
 
         private void Click_lb_Horario(object sender, EventArgs e)
@@ -60,7 +66,7 @@ namespace GestaoHorarios.Telas
 
             Label clicado = (Label)sender;
 
-            clicado.BackColor = Color.Yellow;
+            clicado.BackColor = Color.Cyan;
             if (clicado.Text != "")
             {
                 this.groupBox2.Enabled = true;
@@ -98,6 +104,25 @@ namespace GestaoHorarios.Telas
 
         private void cbPeriodo_SelectedValueChanged(object sender, EventArgs e)
         {
+            List<Vertice> periodos = Manager.GetPeriodos();
+            Vertice periodoSelecionado = null;
+
+            foreach (Vertice v in periodos)
+            {
+                if(((Periodo)v.GetDado).Numero == int.Parse(cbPeriodo.SelectedItem.ToString()))
+                {
+                    periodoSelecionado = v;
+                    break;
+                }
+            }
+
+            List<Vertice> disciplinas = Manager.GetDisciplinasPorPeriodo(periodoSelecionado);
+
+            cbDisciplina.Items.Clear();
+
+            foreach (Vertice v in disciplinas)
+                cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
+
             this.groupBox1.Enabled = true;
         }
     }
