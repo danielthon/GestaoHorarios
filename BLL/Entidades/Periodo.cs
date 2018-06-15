@@ -30,7 +30,7 @@ namespace BLL.Entidades
 
         public bool Equals(IDado other)
         {
-            if (this.Equals((Horario)other)) //cast para lançar exceção
+            if (this.Equals((Periodo)other)) //cast para lançar exceção
                 return true;
             else
                 return false;

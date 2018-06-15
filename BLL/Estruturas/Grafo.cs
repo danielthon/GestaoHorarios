@@ -24,7 +24,7 @@ namespace BLL.Estruturas
         {
             foreach(Vertice v in this.vertices)
             {
-                if (v.GetDado.Equals(dado))
+                if (v.GetDado.GetType() == dado.GetType() && v.GetDado.Equals(dado))
                     return v;
             }
 

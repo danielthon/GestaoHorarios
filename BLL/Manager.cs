@@ -13,7 +13,7 @@ namespace BLL
 {
     public static class Manager
     {
-        public static Grafo grade;
+        public static Grafo grade = new Grafo();
 
         public static Grafo Grade { get { return grade; } }
 
@@ -40,6 +40,8 @@ namespace BLL
             DataTable horarios = (new THorario()).SelectAll();
             DataTable alocacao = (new TAlocacao()).SelectAll();
 
+            grade = new Grafo();
+
             foreach (DataRow linha in disciplinas.Rows)
             {
                 // DISCIPLINA
@@ -63,7 +65,7 @@ namespace BLL
 
                 DataRow linhap = (new TProfessor()).Select(linha[3].ToString()); //uma consulta por inserção de disciplina é muito. Otimizar isso depois
 
-                Professor f = new Professor(int.Parse(linhap[1].ToString()), int.Parse(linhap[3].ToString()));
+                Professor f = new Professor(int.Parse(linhap[0].ToString()), int.Parse(linhap[1].ToString()));
                 Vertice vProfessor = grade.GetVerticePorDado(f);
 
                 if (vProfessor == null)
