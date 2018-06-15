@@ -14,7 +14,11 @@ namespace BLL.Entidades
         //public string ID_Usuario { get { return this.id_usuario == 0 ? "" : this.id_usuario.ToString(); } set { this.id_usuario = int.Parse(value); } }
         public int ID_Usuario { get { return this.id_usuario; } }
 
-        public Administrador(string login, string senha) : base(login, senha) { this.ExisteNoBanco(); } //verifica se existe, se sim, seta o id
+        public Administrador(string login, string senha) : base(login, senha)
+        {
+            //base.ExisteNoBanco();
+            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
+        }
 
         public Administrador(string nome, string login, string senha) : base (nome, login, senha) { }
 
@@ -94,7 +98,7 @@ namespace BLL.Entidades
             }
         }
 
-        public override bool ExisteNoBanco()
+        public bool ExisteNoBanco()
         {
             string[] valoresChave =
             {

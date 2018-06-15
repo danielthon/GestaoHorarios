@@ -63,7 +63,11 @@ namespace GestaoHorarios.Telas
                 {
                     if (prof.SenhaCorreta())
                     {
-                        (new Home(prof)).Show();
+                        this.Hide();
+
+                        Home h = new Home(prof);
+                        h.ShowDialog();
+
                         this.Close();
                     }
                     else
@@ -78,7 +82,11 @@ namespace GestaoHorarios.Telas
             {
                 if (admin.SenhaCorreta())
                 {
-                    (new Home(admin)).Show();
+                    this.Hide();
+
+                    Home h = new Home(admin);
+                    h.ShowDialog();
+
                     this.Close();
                 }
                 else

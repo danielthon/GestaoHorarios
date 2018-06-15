@@ -35,7 +35,7 @@ namespace BLL.Entidades
             this.senha = senha;
 
             this.id_usuario = 0;
-            this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
+            ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public Usuario(int id)

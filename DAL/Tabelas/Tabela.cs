@@ -120,13 +120,20 @@ namespace DAL.Tabelas
                     str.Append(", ");
 
                 if (valoresChave[i] != "" && valoresChave[i] != null)
-                    str.AppendFormat("{0}={1}", camposChave[i], valoresChave[i]);
+                {
+                    int aux;
+
+                    if (int.TryParse(valoresChave[i], out aux))
+                        str.AppendFormat("{0}={1}", camposChave[i], aux);
+                    else
+                        str.AppendFormat("{0}='{1}'", camposChave[i], valoresChave[i]);
+                }
             }
 
-            if (int.TryParse(Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT id FROM {0} WHERE {1};", tabela)), out id))
-                return false;
-            else
+            if (int.TryParse(Conexao.ExecutaComandoSQL_Campo(string.Format("SELECT id FROM {0} WHERE {1};", tabela, str.ToString())), out id))
                 return true;
+            else
+                return false;
         }
     }
 }

@@ -85,12 +85,22 @@ namespace DAL.MySQL
 
         public static DataRow ExecutaComandoSQL_Linha(string query)
         {
-            return ExecutaComandoSQL_Tabela(query).Rows[0];
+            DataRowCollection retorno = ExecutaComandoSQL_Tabela(query).Rows;
+
+            if (retorno.Count > 0)
+                return retorno[0];
+            else
+                return null;
         }
 
         public static string ExecutaComandoSQL_Campo(string query)
         {
-            return ExecutaComandoSQL_Tabela(query).Rows[0][0].ToString();
+            DataRowCollection retorno = ExecutaComandoSQL_Tabela(query).Rows;
+
+            if (retorno.Count > 0)
+                return retorno[0][0].ToString();
+            else
+                return null;
         }
     }
 }
