@@ -55,3 +55,16 @@ D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorar
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoHorarios.resources
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoUsuarios.resources
 D:\PUC\Grafos\GestaoHorarios\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.PerfilUsuario.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\BLL.dll
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.dll
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.dll
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\BLL.pdb
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.pdb
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.xml
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csprojResolveAssemblyReference.cache
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ConsultaHorarios.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.Login.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoDisciplinas.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoHorarios.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.ManutencaoUsuarios.resources
+C:\Users\1019044\Desktop\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.PerfilUsuario.resources

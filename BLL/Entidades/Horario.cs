@@ -70,10 +70,24 @@ namespace BLL.Entidades
 
         public bool Equals(IDado other)
         {
-            if (this.Equals((Horario)other)) //cast para lançar exceção
-                return true;
-            else
+            if (other.GetType() != typeof(Horario))
                 return false;
+
+            if (((Horario)other).ID != 0 && this.id != 0)
+            {
+                if (((Horario)other).ID == this.id)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                if (((Horario)other).DiaNaSemana == this.diaSemana
+                    && ((Horario)other).Hora == this.hora)
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public void SalvarNoBanco()

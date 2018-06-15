@@ -52,10 +52,23 @@ namespace BLL.Entidades
 
         public bool Equals(IDado other)
         {
-            if (this.Equals((Disciplina)other)) //cast para lançar exceção
-                return true;
-            else
+            if (other.GetType() != typeof(Disciplina))
                 return false;
+
+            if(((Disciplina)other).ID != 0 && this.id != 0)
+            {
+                if (((Disciplina)other).ID == this.id)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                if (((Disciplina)other).Nome == this.nome)
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public void SalvarNoBanco()

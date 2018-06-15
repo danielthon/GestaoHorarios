@@ -30,7 +30,10 @@ namespace BLL.Entidades
 
         public bool Equals(IDado other)
         {
-            if (this.Equals((Periodo)other)) //cast para lançar exceção
+            if (other.GetType() != typeof(Periodo))
+                return false;
+
+            if (((Periodo)other).Numero == this.numero)
                 return true;
             else
                 return false;

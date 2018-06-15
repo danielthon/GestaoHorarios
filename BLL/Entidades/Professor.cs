@@ -39,10 +39,23 @@ namespace BLL.Entidades
 
         public bool Equals(IDado other)
         {
-            if (this.Equals((Professor)other)) //cast para lançar exceção
-                return true;
-            else
+            if (other.GetType() != typeof(Professor))
                 return false;
+
+            if (((Professor)other).ID != 0 && this.id_prof != 0)
+            {
+                if (((Professor)other).ID == this.id_prof)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                if (((Professor)other).Login == this.login)
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public override void SalvarNoBanco()
