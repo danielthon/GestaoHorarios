@@ -25,6 +25,11 @@ namespace GestaoHorarios.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("Tem certeza que deseja prosseguir com a importação? Este processo só pode ser realizado uma vez.", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+            if (dr == DialogResult.No)
+                return;
+
             Cursor.Current = Cursors.WaitCursor;
 
             LeituraArquivo.LerAquivo("ArquivoEntrada.txt", ' ');

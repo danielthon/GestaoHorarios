@@ -78,7 +78,7 @@ namespace BLL.Estruturas
             {
                 foreach (Vertice vertice in lista)
                 {
-                    if (aresta.OutraExtremidade(this).Equals(lista))
+                    if (aresta.OutraExtremidade(this).Equals(vertice))
                         return true;
                 }
             }

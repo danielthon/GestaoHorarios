@@ -50,7 +50,7 @@ namespace DAL.MySQL
                 }
                 catch
                 {
-                    mensagem = "Instância inacessível no respectivo servidor. Confira se está aberta e disponível.";
+                    mensagem = "Instância MySQL inacessível no respectivo servidor ('" + servidor + "'). Confira se está aberta e disponível.";
                 }
 
                 return false;

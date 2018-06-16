@@ -102,7 +102,17 @@ namespace BLL.Entidades
 
         public bool ExisteNoBanco()
         {
-            throw new NotImplementedException();
+            string[] valoresChave =
+            {
+                this.hora == Hora._19h00 ? "19:00:00" : "20:50:00",
+                this.hora == Hora._19h00 ? "20:40:00" : "22:30:00",
+                ((int)this.diaSemana).ToString()
+            };
+
+            if ((new THorario()).Exists(valoresChave, out this.id)) //consulta o banco e seta o id se encontrar o registro
+                return true;
+            else
+                return false;
         }
 
         public bool CarregaAtributos(int id)

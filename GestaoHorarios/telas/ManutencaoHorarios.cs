@@ -16,6 +16,7 @@ namespace GestaoHorarios.Telas
     public partial class ManutencaoHorarios : FormBase
     {
         private List<Label> lb_Horarios;
+        private List<Vertice> v_Horarios;
 
         public ManutencaoHorarios()
         {
@@ -50,6 +51,8 @@ namespace GestaoHorarios.Telas
             lbExibeProfessor.Text = "";
 
             Manager.CarregarGrafoPeloBanco();
+
+            v_Horarios = Manager.GetHorarios();
 
             List<Vertice> periodos = Manager.GetPeriodos();
 
@@ -127,6 +130,12 @@ namespace GestaoHorarios.Telas
             foreach (Vertice v in disciplinas)
                 cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
 
+            foreach (Label lb in lb_Horarios)
+            {
+                lb.BackColor = Color.White;
+                lb.Text = ""; // ALTERAR DEPOIS
+            }
+
             this.groupBox1.Enabled = true;
         }
 
@@ -144,10 +153,40 @@ namespace GestaoHorarios.Telas
 
         private void btGravar_Click(object sender, EventArgs e)
         {
-            Vertice vd = Manager.GetVerticeNaGrade(new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0));
-            //Vertice vh = Manager.GetVerticeNaGrade(p);
+            Label lb_Selec = null;
 
-            //if(Manager.TentarAlocar()
+            Vertice vd = Manager.GetVerticeNaGrade(new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0));
+            Vertice vh = null;
+
+            for (int i = 0; i < lb_Horarios.Count; i++)
+            {
+                if (lb_Horarios[i].BackColor != Color.White)
+                {
+                    lb_Selec = lb_Horarios[i];
+                    vh = v_Horarios[i]; //a lista de labels está na mesma ordem da lista de vertices de horarios
+                    break;
+                }
+            }
+
+            if (Manager.TentarAlocar(vh, vd)) //ja realiza a alocação no grafo e grava no banco
+            {
+                //MessageBox.Show("Alocação gravada!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+
+                lb_Selec.Text = cbDisciplina.SelectedItem.ToString();
+
+                foreach (Label lb in lb_Horarios)
+                    lb.BackColor = Color.White;
+
+                lbHorarioEscolhido.Text = null;
+
+                cbDisciplina.SelectedIndex = -1;
+                cbDisciplina.Enabled = false;
+                lbExibeProfessor.Text = "";
+                btGravar.Enabled = false;
+            }
+            else
+                MessageBox.Show("Não foi possível gravar a alocação! Este professor já ministra uma disciplina neste mesmo horário, em outro período.",
+                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
         }
     }
 }

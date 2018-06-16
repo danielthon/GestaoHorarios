@@ -151,24 +151,48 @@ namespace BLL
             return null;
         }
 
-        //public static Vertice 
-
-        public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina, out Alocacao alocacao)
+        public static List<Vertice> GetHorarios()
         {
-            alocacao = null;
+            List<Vertice> horarios = new List<Vertice>();
+
+            foreach (Vertice v in Grade.Vertices)
+            {
+                if (v.GetDado.GetType() == typeof(Horario))
+                    horarios.Add(v);
+            }
+
+            return horarios;
+        } 
+
+        public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina/*, out Alocacao alocacao*/)
+        {
+            Alocacao alocacao = null;
 
             if (vHorario.IsAdjacente(vDisciplina.GetAdjacentes()))
                 return false;
             else
             {
-                Vertice vProfessor = vDisciplina.GetAdjacentes()[0];
-                Vertice vPeriodo = vDisciplina.GetAdjacentes()[1];
+                Vertice vProfessor = null;
+                Vertice vPeriodo = null;
+
+                foreach (Vertice v in vDisciplina.GetAdjacentes())
+                {
+                    if (v.GetDado.GetType() == typeof(Professor))
+                        vProfessor = v;
+                    else
+                        vPeriodo = v;
+                }
+
+                //Vertice vProfessor = vDisciplina.GetAdjacentes()[0];
+                //Vertice vPeriodo = vDisciplina.GetAdjacentes()[1];
 
                 Grade.AddAresta(new Aresta(vHorario, vProfessor));
                 Grade.AddAresta(new Aresta(vHorario, vPeriodo));
                 Grade.AddAresta(new Aresta(vHorario, vDisciplina));
 
                 alocacao = new Alocacao((Disciplina)vDisciplina.GetDado, (Horario)vHorario.GetDado);
+
+                alocacao.SalvarNoBanco();
 
                 return true;
             }

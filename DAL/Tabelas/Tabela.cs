@@ -52,7 +52,7 @@ namespace DAL.Tabelas
 
         public DataTable SelectAll()
         {
-            return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0};", tabela));
+            return Conexao.ExecutaComandoSQL_Tabela(string.Format("SELECT * FROM {0} ORDER BY id;", tabela));
         }
 
         public DataRow Select(string id)
@@ -132,7 +132,7 @@ namespace DAL.Tabelas
             for (int i = 0; i < camposChave.Length; i++)
             {
                 if (i != 0)
-                    str.Append(", ");
+                    str.Append(" AND ");
 
                 if (valoresChave[i] != "" && valoresChave[i] != null)
                 {

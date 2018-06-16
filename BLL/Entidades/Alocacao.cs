@@ -37,16 +37,35 @@ namespace BLL.Entidades
 
         public void SalvarNoBanco()
         {
-            throw new NotImplementedException();
+            TAlocacao tabela = new TAlocacao();
+
+            string[] values =
+            {
+                this.id_disciplina.ToString(),
+                this.id_horario.ToString()
+            };
+
+            if (this.id == 0) //nao possui id, então 'alocacao' ainda nao foi inserido no banco
+            {
+                tabela.Insert(values);  // INSERIR
+
+                if (!this.ExisteNoBanco())
+                    throw new Exception("Dado não inserido no banco!");
+            }
+            else
+            {
+                tabela.Update(values, this.id);  // ALTERAR
+            }
         }
 
         public void RemoverDoBanco()
         {
             throw new NotImplementedException();
         }
+
         public bool ExisteNoBanco()
         {
-            TUsuario tabela = new TUsuario();
+            TAlocacao tabela = new TAlocacao();
             string[] valoresChave =
             {
                 this.id_disciplina.ToString(),

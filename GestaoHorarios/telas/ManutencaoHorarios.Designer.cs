@@ -78,13 +78,13 @@
             // 
             // lbHorarioEscolhido
             // 
-            this.lbHorarioEscolhido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbHorarioEscolhido.Location = new System.Drawing.Point(118, 0);
+            this.lbHorarioEscolhido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbHorarioEscolhido.Location = new System.Drawing.Point(117, 0);
             this.lbHorarioEscolhido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbHorarioEscolhido.MaximumSize = new System.Drawing.Size(150, 146);
             this.lbHorarioEscolhido.MinimumSize = new System.Drawing.Size(150, 2);
             this.lbHorarioEscolhido.Name = "lbHorarioEscolhido";
-            this.lbHorarioEscolhido.Size = new System.Drawing.Size(150, 19);
+            this.lbHorarioEscolhido.Size = new System.Drawing.Size(150, 22);
             this.lbHorarioEscolhido.TabIndex = 31;
             // 
             // btGravar
@@ -169,14 +169,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(677, 122);
+            this.groupBox1.Size = new System.Drawing.Size(683, 122);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 22);
+            this.label1.Location = new System.Drawing.Point(129, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.MaximumSize = new System.Drawing.Size(76, 82);
             this.label1.MinimumSize = new System.Drawing.Size(76, 2);
@@ -188,9 +188,10 @@
             // 
             // lb_segunda1
             // 
+            this.lb_segunda1.BackColor = System.Drawing.Color.White;
             this.lb_segunda1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_segunda1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_segunda1.Location = new System.Drawing.Point(112, 52);
+            this.lb_segunda1.Location = new System.Drawing.Point(117, 51);
             this.lb_segunda1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_segunda1.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_segunda1.MinimumSize = new System.Drawing.Size(100, 25);
@@ -202,7 +203,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 22);
+            this.label5.Location = new System.Drawing.Point(579, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.MaximumSize = new System.Drawing.Size(76, 82);
             this.label5.MinimumSize = new System.Drawing.Size(76, 2);
@@ -215,7 +216,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(10, 86);
+            this.label67.Location = new System.Drawing.Point(13, 86);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(91, 17);
@@ -224,9 +225,10 @@
             // 
             // lb_segunda2
             // 
+            this.lb_segunda2.BackColor = System.Drawing.Color.White;
             this.lb_segunda2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_segunda2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_segunda2.Location = new System.Drawing.Point(112, 83);
+            this.lb_segunda2.Location = new System.Drawing.Point(117, 82);
             this.lb_segunda2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_segunda2.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_segunda2.MinimumSize = new System.Drawing.Size(100, 25);
@@ -238,7 +240,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(9, 58);
+            this.label68.Location = new System.Drawing.Point(12, 58);
             this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(91, 17);
@@ -248,7 +250,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(459, 22);
+            this.label4.Location = new System.Drawing.Point(464, 21);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.MaximumSize = new System.Drawing.Size(76, 82);
             this.label4.MinimumSize = new System.Drawing.Size(76, 2);
@@ -260,9 +262,10 @@
             // 
             // lb_terca1
             // 
+            this.lb_terca1.BackColor = System.Drawing.Color.White;
             this.lb_terca1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_terca1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_terca1.Location = new System.Drawing.Point(225, 52);
+            this.lb_terca1.Location = new System.Drawing.Point(230, 51);
             this.lb_terca1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_terca1.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_terca1.MinimumSize = new System.Drawing.Size(100, 25);
@@ -274,7 +277,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(349, 22);
+            this.label3.Location = new System.Drawing.Point(354, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.MaximumSize = new System.Drawing.Size(76, 82);
             this.label3.MinimumSize = new System.Drawing.Size(76, 2);
@@ -286,9 +289,10 @@
             // 
             // lb_terca2
             // 
+            this.lb_terca2.BackColor = System.Drawing.Color.White;
             this.lb_terca2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_terca2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_terca2.Location = new System.Drawing.Point(225, 82);
+            this.lb_terca2.Location = new System.Drawing.Point(230, 81);
             this.lb_terca2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_terca2.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_terca2.MinimumSize = new System.Drawing.Size(100, 25);
@@ -300,7 +304,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 22);
+            this.label2.Location = new System.Drawing.Point(241, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.MaximumSize = new System.Drawing.Size(76, 82);
             this.label2.MinimumSize = new System.Drawing.Size(76, 2);
@@ -312,9 +316,10 @@
             // 
             // lb_quarta1
             // 
+            this.lb_quarta1.BackColor = System.Drawing.Color.White;
             this.lb_quarta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quarta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quarta1.Location = new System.Drawing.Point(335, 52);
+            this.lb_quarta1.Location = new System.Drawing.Point(340, 51);
             this.lb_quarta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_quarta1.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_quarta1.MinimumSize = new System.Drawing.Size(100, 25);
@@ -325,9 +330,10 @@
             // 
             // lb_quarta2
             // 
+            this.lb_quarta2.BackColor = System.Drawing.Color.White;
             this.lb_quarta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quarta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quarta2.Location = new System.Drawing.Point(335, 82);
+            this.lb_quarta2.Location = new System.Drawing.Point(340, 81);
             this.lb_quarta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_quarta2.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_quarta2.MinimumSize = new System.Drawing.Size(100, 25);
@@ -338,9 +344,10 @@
             // 
             // lb_sexta2
             // 
+            this.lb_sexta2.BackColor = System.Drawing.Color.White;
             this.lb_sexta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_sexta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_sexta2.Location = new System.Drawing.Point(561, 82);
+            this.lb_sexta2.Location = new System.Drawing.Point(566, 81);
             this.lb_sexta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_sexta2.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_sexta2.MinimumSize = new System.Drawing.Size(100, 25);
@@ -351,9 +358,10 @@
             // 
             // lb_quinta1
             // 
+            this.lb_quinta1.BackColor = System.Drawing.Color.White;
             this.lb_quinta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quinta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quinta1.Location = new System.Drawing.Point(448, 52);
+            this.lb_quinta1.Location = new System.Drawing.Point(453, 51);
             this.lb_quinta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_quinta1.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_quinta1.MinimumSize = new System.Drawing.Size(100, 25);
@@ -364,9 +372,10 @@
             // 
             // lb_sexta1
             // 
+            this.lb_sexta1.BackColor = System.Drawing.Color.White;
             this.lb_sexta1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_sexta1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_sexta1.Location = new System.Drawing.Point(561, 52);
+            this.lb_sexta1.Location = new System.Drawing.Point(566, 51);
             this.lb_sexta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_sexta1.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_sexta1.MinimumSize = new System.Drawing.Size(100, 25);
@@ -377,9 +386,10 @@
             // 
             // lb_quinta2
             // 
+            this.lb_quinta2.BackColor = System.Drawing.Color.White;
             this.lb_quinta2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_quinta2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_quinta2.Location = new System.Drawing.Point(448, 82);
+            this.lb_quinta2.Location = new System.Drawing.Point(453, 81);
             this.lb_quinta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_quinta2.MaximumSize = new System.Drawing.Size(100, 25);
             this.lb_quinta2.MinimumSize = new System.Drawing.Size(100, 25);
@@ -413,7 +423,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 361);
+            this.ClientSize = new System.Drawing.Size(720, 361);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label69);

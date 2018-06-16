@@ -71,13 +71,13 @@ insert into administrador values (null, 2);
 insert into administrador values (null, 3);
 insert into professor values (null, 4);
 
-insert into horario values (null, '19:00:00', '20:30:00', 2);
+insert into horario values (null, '19:00:00', '20:40:00', 2);
 insert into horario values (null, '20:50:00', '22:30:00', 2);
-insert into horario values (null, '19:00:00', '20:30:00', 3);
+insert into horario values (null, '19:00:00', '20:40:00', 3);
 insert into horario values (null, '20:50:00', '22:30:00', 3);
-insert into horario values (null, '19:00:00', '20:30:00', 4);
+insert into horario values (null, '19:00:00', '20:40:00', 4);
 insert into horario values (null, '20:50:00', '22:30:00', 4);
-insert into horario values (null, '19:00:00', '20:30:00', 5);
+insert into horario values (null, '19:00:00', '20:40:00', 5);
 insert into horario values (null, '20:50:00', '22:30:00', 5);
-insert into horario values (null, '19:00:00', '20:30:00', 6);
+insert into horario values (null, '19:00:00', '20:40:00', 6);
 insert into horario values (null, '20:50:00', '22:30:00', 6);
