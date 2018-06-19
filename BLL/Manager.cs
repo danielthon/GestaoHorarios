@@ -208,9 +208,6 @@ namespace BLL
                         vPeriodo = v;
                 }
 
-                //Vertice vProfessor = vDisciplina.GetAdjacentes()[0];
-                //Vertice vPeriodo = vDisciplina.GetAdjacentes()[1];
-
                 grade.AddAresta(new Aresta(vHorario, vProfessor));
                 grade.AddAresta(new Aresta(vHorario, vPeriodo));
                 grade.AddAresta(new Aresta(vHorario, vDisciplina));

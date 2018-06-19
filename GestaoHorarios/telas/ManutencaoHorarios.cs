@@ -38,7 +38,8 @@ namespace GestaoHorarios.Telas
                 lb.Click += Click_lb_Horario;
 
             this.groupBox1.Enabled = false;
-            this.cbDisciplina.Enabled = false;
+            this.groupBox2.Enabled = false;
+
             this.btGravar.Enabled = false;
         }
 
@@ -59,22 +60,27 @@ namespace GestaoHorarios.Telas
 
         private void Click_lb_Horario(object sender, EventArgs e)
         {
-            this.groupBox2.Enabled = true;
-
             foreach (Label lb in lb_Horarios)
                 lb.BackColor = Color.White;
 
             Label clicado = (Label)sender;
 
             clicado.BackColor = Color.Turquoise;
-            if (clicado.Text != "")
+
+            if (clicado.Text == "")
             {
                 this.groupBox2.Enabled = true;
-                this.cbDisciplina.Text = clicado.Text;
+
+                cbDisciplina.SelectedIndex = -1;
+                lbExibeProfessor.Text = "";
+                btGravar.Enabled = false;
             }
             else
             {
-                this.cbDisciplina.Enabled = true;
+                this.groupBox2.Enabled = false;
+
+                cbDisciplina.SelectedItem = clicado.Text;
+                // "cbDisciplina_SelectedValueChanged" carrega o professor
             }
 
             switch (lb_Horarios.IndexOf(clicado))
@@ -99,18 +105,6 @@ namespace GestaoHorarios.Telas
                     lbHorarioEscolhido.Text = "6ª Feira - Primeiro Horário"; break;
                 case 9:
                     lbHorarioEscolhido.Text = "6ª Feira - Segundo Horário"; break;
-            }
-
-            if(((Label)sender).Text != "")
-            {
-                cbDisciplina.SelectedItem = ((Label)sender).Text;
-                // "cbDisciplina_SelectedValueChanged" vai fazer o resto
-            }
-            else
-            {
-                cbDisciplina.SelectedIndex = -1;
-                lbExibeProfessor.Text = "";
-                btGravar.Enabled = false;
             }
         }
 
@@ -176,6 +170,11 @@ namespace GestaoHorarios.Telas
 
         private void btGravar_Click(object sender, EventArgs e)
         {
+            DialogResult dr = MessageBox.Show("Confirma a alocação?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (dr == DialogResult.No)
+                return;
+
             Label lb_Selec = null;
 
             Vertice vd = Manager.GetVerticeNaGrade(new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0));
@@ -193,7 +192,7 @@ namespace GestaoHorarios.Telas
 
             if (Manager.TentarAlocar(vh, vd)) //ja realiza a alocação no grafo e grava no banco
             {
-                //MessageBox.Show("Alocação gravada!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Alocação gravada!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
                 lb_Selec.Text = cbDisciplina.SelectedItem.ToString();
 
@@ -202,8 +201,9 @@ namespace GestaoHorarios.Telas
 
                 lbHorarioEscolhido.Text = null;
 
+                groupBox2.Enabled = false;
+
                 cbDisciplina.SelectedIndex = -1;
-                cbDisciplina.Enabled = false;
                 lbExibeProfessor.Text = "";
                 btGravar.Enabled = false;
             }
