@@ -122,18 +122,18 @@ namespace BLL
             return periodos;
         }
 
-        //public static List<Vertice> GetDisciplinasPorPeriodo(Vertice periodo)
-        //{
-        //    List<Vertice> disciplina = new List<Vertice>();
+        public static List<Vertice> GetDisciplinasPorPeriodo(Vertice periodo)
+        {
+            List<Vertice> disciplina = new List<Vertice>();
 
-        //    foreach (Vertice v in periodo.GetAdjacentes())
-        //    {
-        //        if (v.GetDado.GetType() == typeof(Disciplina))
-        //            disciplina.Add(v);
-        //    }
+            foreach (Vertice v in periodo.GetAdjacentes())
+            {
+                if (v.GetDado.GetType() == typeof(Disciplina))
+                    disciplina.Add(v);
+            }
 
-        //    return disciplina;
-        //}
+            return disciplina;
+        }
 
         public static List<Vertice> GetDisciplinasNaoAlocadasPorPeriodo(Vertice periodo)
         {

@@ -138,7 +138,7 @@ namespace GestaoHorarios.Telas
             }
 
             // carrega as disciplinas
-            List<Vertice> disciplinas = Manager.GetDisciplinasNaoAlocadasPorPeriodo(periodoSelecionado);
+            List<Vertice> disciplinas = Manager.GetDisciplinasPorPeriodo(periodoSelecionado);
 
             foreach (Vertice v in disciplinas)
                 cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
