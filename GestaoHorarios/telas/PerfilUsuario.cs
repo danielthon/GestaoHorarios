@@ -23,6 +23,8 @@ namespace GestaoHorarios.Telas
         {
             lb_titulo.Text = "Configuração de Perfil";
 
+            Manager.UsuarioLogado.CarregaAtributos(Manager.UsuarioLogado.ID);
+
             lblLogin.Text = Manager.UsuarioLogado.Login;
 
             if (Manager.UsuarioLogado.GetType() == typeof(Administrador))

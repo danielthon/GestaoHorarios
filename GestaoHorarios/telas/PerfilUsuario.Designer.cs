@@ -46,7 +46,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Enabled = false;
             this.label1.Location = new System.Drawing.Point(30, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
@@ -74,7 +73,6 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Enabled = false;
             this.lblLogin.Location = new System.Drawing.Point(92, 72);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(38, 17);
@@ -152,7 +150,6 @@
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Enabled = false;
             this.lblTipo.Location = new System.Drawing.Point(281, 72);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(38, 17);
@@ -162,7 +159,6 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Enabled = false;
             this.label6.Location = new System.Drawing.Point(212, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 17);

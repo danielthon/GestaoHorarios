@@ -37,9 +37,6 @@ namespace GestaoHorarios.Telas
             foreach (Label lb in lb_Horarios)
                 lb.Click += Click_lb_Horario;
 
-            //this.cbPeriodo.Items.Add("teste");
-            //this.cbDisciplina.Items.Add("teset2");
-
             this.groupBox1.Enabled = false;
             this.cbDisciplina.Enabled = false;
             this.btGravar.Enabled = false;
@@ -104,9 +101,17 @@ namespace GestaoHorarios.Telas
                     lbHorarioEscolhido.Text = "6ª Feira - Segundo Horário"; break;
             }
 
-            cbDisciplina.SelectedIndex = -1;
-            lbExibeProfessor.Text = "";
-            btGravar.Enabled = false;
+            if(((Label)sender).Text != "")
+            {
+                cbDisciplina.SelectedItem = ((Label)sender).Text;
+                // "cbDisciplina_SelectedValueChanged" vai fazer o resto
+            }
+            else
+            {
+                cbDisciplina.SelectedIndex = -1;
+                lbExibeProfessor.Text = "";
+                btGravar.Enabled = false;
+            }
         }
 
         private void cbPeriodo_SelectedValueChanged(object sender, EventArgs e)
@@ -125,15 +130,32 @@ namespace GestaoHorarios.Telas
 
             List<Vertice> disciplinas = Manager.GetDisciplinasPorPeriodo(periodoSelecionado);
 
+            //limpa tuto
+            
+            groupBox2.Enabled = false;
+
+            lbHorarioEscolhido.Text = "";
             cbDisciplina.Items.Clear();
+            lbExibeProfessor.Text = "";
 
-            foreach (Vertice v in disciplinas)
-                cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
-
+            // limpa todos os labels de horario
             foreach (Label lb in lb_Horarios)
             {
                 lb.BackColor = Color.White;
-                lb.Text = ""; // ALTERAR DEPOIS
+                lb.Text = "";
+            }
+
+            // carrega as disciplinas
+            foreach (Vertice v in disciplinas)
+                cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
+
+            // carrega os horarios que tem disciplina alocada
+            for (int i = 0; i < lb_Horarios.Count; i++)
+            {
+                Vertice disciplina = Manager.GetDisciplinaAlocada(periodoSelecionado, v_Horarios[i]);
+
+                if (disciplina != null)
+                    lb_Horarios[i].Text = ((Disciplina)disciplina.GetDado).Nome;
             }
 
             this.groupBox1.Enabled = true;
@@ -145,6 +167,7 @@ namespace GestaoHorarios.Telas
             {
                 Disciplina aux = new Disciplina(cbDisciplina.SelectedItem.ToString(), 0, 0);
 
+                lbExibeProfessor.Enabled = true;
                 lbExibeProfessor.Text = ((Professor)Manager.GetProfessorDeDisciplina(Manager.GetVerticeNaGrade(aux)).GetDado).Nome;
 
                 btGravar.Enabled = true;

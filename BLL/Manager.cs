@@ -146,6 +146,23 @@ namespace BLL
             return null;
         }
 
+        public static Vertice GetDisciplinaAlocada(Vertice periodo, Vertice horario)
+        {
+            foreach(Vertice v in horario.GetAdjacentes())
+            {
+                if(v.GetDado.GetType() == typeof(Disciplina))
+                {
+                    foreach (Vertice p in v.GetAdjacentes())
+                    {
+                        if (p.GetDado.Equals(periodo.GetDado))
+                            return v;
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public static Vertice GetVerticeNaGrade(IDado dado)
         {
             //foreach(Vertice v in Grade.Vertices)
