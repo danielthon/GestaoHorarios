@@ -39,7 +39,7 @@ namespace GestaoHorarios.Telas
 
             // FIM CONEXAO
 
-            lb_titulo.Text = "";
+            lb_titulo.Text = "Login no sistema";
         }
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -49,11 +49,11 @@ namespace GestaoHorarios.Telas
 
             Administrador admin = new Administrador(tbUsuario.Text, tbSenhaUsuario.Text);
 
-            if (admin.ID_Usuario == 0)
+            if (admin.ID == 0)
             {
                 Professor prof = new Professor(tbUsuario.Text, tbSenhaUsuario.Text);
 
-                if (prof.ID_Usuario == 0)
+                if (prof.ID == 0)
                 {
                     tbSenhaUsuario.Clear();
                     tbUsuario.Clear();
@@ -104,7 +104,7 @@ namespace GestaoHorarios.Telas
 
         private void tbUsuario_TextChanged(object sender, EventArgs e)
         {
-            lbErroLogin.Visible = false;
+            //lbErroLogin.Visible = false;
         }
     }
 }

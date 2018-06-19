@@ -17,24 +17,39 @@ namespace GestaoHorarios.Telas
         {
             InitializeComponent();
 
-            if (user.GetType() == typeof(Professor))
-                MessageBox.Show("TESTE: Professor");
+            if (user.GetType() == typeof(Administrador))
+            {
+                this.Text += " - Administrador";
+
+                manutToolStrip.DropDownItems.Add("Alocação de Horários").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new ManutencaoHorarios())); 
+                manutToolStrip.DropDownItems.Add("Disciplinas").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new ManutencaoDisciplinas()));
+                manutToolStrip.DropDownItems.Add("Usuários").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new ManutencaoUsuarios()));
+            }
             else
-                MessageBox.Show("TESTE: Administrador");
+            {
+                this.Text += " - Professor";
+
+                manutToolStrip.DropDownItems.Add("Horários").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new ConsultaHorarios()));
+
+                AbrirChildForm(null, null, new ConsultaHorarios());
+            }
+
+            configToolStrip.DropDownItems.Add("Meu Perfil").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new PerfilUsuario()));
         }
 
-        private void alocaçãoDeHoráriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AbrirChildForm(object sender, EventArgs e, Form f)
         {
-            ManutencaoHorarios childForm = new ManutencaoHorarios();
-            childForm.MdiParent = this;
-            childForm.Show();
-        }
+            foreach (Form aberto in Application.OpenForms)
+            {
+                if (aberto.GetType() == f.GetType()) //se ja existe um form desse tipo aberto
+                {
+                    f.Dispose();
+                    return;
+                }
+            }
 
-        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManutencaoDisciplinas childForm = new ManutencaoDisciplinas();
-            childForm.MdiParent = this;
-            childForm.Show();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }

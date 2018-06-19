@@ -98,9 +98,11 @@ namespace BLL
 
                         Vertice vDisciplina = grade.GetVerticePorDado(disc);
                         Vertice vPeriodo = grade.GetVerticePorDado(new Periodo(disc.Periodo));
+                        Vertice vProfessor = grade.GetVerticePorDado(new Professor(disc.ID_Professor, 0));
 
                         grade.AddAresta(new Aresta(vHorario, vDisciplina));
                         grade.AddAresta(new Aresta(vHorario, vPeriodo));
+                        grade.AddAresta(new Aresta(vHorario, vProfessor));
                     }
                 }
             }
@@ -124,7 +126,10 @@ namespace BLL
             List<Vertice> disciplina = new List<Vertice>();
 
             foreach (Vertice v in periodo.GetAdjacentes())
-                disciplina.Add(v);
+            {
+                if (v.GetDado.GetType() == typeof(Disciplina))
+                    disciplina.Add(v);
+            }
 
             return disciplina;
         }
@@ -142,13 +147,15 @@ namespace BLL
 
         public static Vertice GetVerticeNaGrade(IDado dado)
         {
-            foreach(Vertice v in Grade.Vertices)
-            {
-                if (dado.Equals(v.GetDado))
-                    return v;
-            }
+            //foreach(Vertice v in Grade.Vertices)
+            //{
+            //    if (dado.Equals(v.GetDado))
+            //        return v;
+            //}
 
-            return null;
+            //return null;
+
+            return Grade.GetVerticePorDado(dado);
         }
 
         public static List<Vertice> GetHorarios()

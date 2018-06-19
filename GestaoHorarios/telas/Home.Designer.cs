@@ -30,13 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.menuAdmin = new System.Windows.Forms.MenuStrip();
-            this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alocaçãoDeHoráriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.meuPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.meuPerfilToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.configToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +41,8 @@
             this.menuAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuAdmin.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manutençãoToolStripMenuItem,
-            this.meuPerfilToolStripMenuItem,
-            this.xToolStripMenuItem});
+            this.manutToolStrip,
+            this.configToolStrip});
             this.menuAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuAdmin.Name = "menuAdmin";
             this.menuAdmin.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -56,55 +50,17 @@
             this.menuAdmin.TabIndex = 1;
             this.menuAdmin.Text = "menuStrip1";
             // 
-            // manutençãoToolStripMenuItem
+            // manutToolStrip
             // 
-            this.manutençãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alocaçãoDeHoráriosToolStripMenuItem,
-            this.disciplinasToolStripMenuItem,
-            this.usuáriosToolStripMenuItem});
-            this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
-            this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.manutençãoToolStripMenuItem.Text = "Manutenção";
+            this.manutToolStrip.Name = "manutToolStrip";
+            this.manutToolStrip.Size = new System.Drawing.Size(92, 21);
+            this.manutToolStrip.Text = "Manutenção";
             // 
-            // alocaçãoDeHoráriosToolStripMenuItem
+            // configToolStrip
             // 
-            this.alocaçãoDeHoráriosToolStripMenuItem.Name = "alocaçãoDeHoráriosToolStripMenuItem";
-            this.alocaçãoDeHoráriosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.alocaçãoDeHoráriosToolStripMenuItem.Text = "Alocação de Horários";
-            this.alocaçãoDeHoráriosToolStripMenuItem.Click += new System.EventHandler(this.alocaçãoDeHoráriosToolStripMenuItem_Click);
-            // 
-            // disciplinasToolStripMenuItem
-            // 
-            this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.disciplinasToolStripMenuItem.Text = "Disciplinas";
-            this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
-            // 
-            // usuáriosToolStripMenuItem
-            // 
-            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
-            // 
-            // meuPerfilToolStripMenuItem
-            // 
-            this.meuPerfilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.meuPerfilToolStripMenuItem1});
-            this.meuPerfilToolStripMenuItem.Name = "meuPerfilToolStripMenuItem";
-            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(98, 21);
-            this.meuPerfilToolStripMenuItem.Text = "Configuração";
-            // 
-            // meuPerfilToolStripMenuItem1
-            // 
-            this.meuPerfilToolStripMenuItem1.Name = "meuPerfilToolStripMenuItem1";
-            this.meuPerfilToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
-            this.meuPerfilToolStripMenuItem1.Text = "Meu perfil";
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 21);
-            this.xToolStripMenuItem.Text = "x";
+            this.configToolStrip.Name = "configToolStrip";
+            this.configToolStrip.Size = new System.Drawing.Size(98, 21);
+            this.configToolStrip.Text = "Configuração";
             // 
             // Home
             // 
@@ -133,12 +89,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuAdmin;
-        private System.Windows.Forms.ToolStripMenuItem manutençãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alocaçãoDeHoráriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem disciplinasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem meuPerfilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem meuPerfilToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem xToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manutToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem configToolStrip;
     }
 }

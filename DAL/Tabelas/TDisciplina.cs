@@ -9,7 +9,7 @@ namespace DAL.Tabelas
 
             this.campos = new string[]
             {
-                "Id_Periodo",
+                "Periodo",
                 "Nome",
                 "Id_Professor"
             };

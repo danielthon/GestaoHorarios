@@ -33,23 +33,24 @@
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbErroLogin = new System.Windows.Forms.Label();
+            this.picDrawing = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picDrawing)).BeginInit();
             this.SuspendLayout();
             // 
             // btLogin
             // 
-            this.btLogin.Location = new System.Drawing.Point(114, 269);
+            this.btLogin.Location = new System.Drawing.Point(170, 290);
             this.btLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(65, 35);
             this.btLogin.TabIndex = 39;
-            this.btLogin.Text = "ENTRAR";
+            this.btLogin.Text = "Entrar";
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // tbSenhaUsuario
             // 
-            this.tbSenhaUsuario.Location = new System.Drawing.Point(98, 177);
+            this.tbSenhaUsuario.Location = new System.Drawing.Point(86, 252);
             this.tbSenhaUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tbSenhaUsuario.Name = "tbSenhaUsuario";
             this.tbSenhaUsuario.PasswordChar = '•';
@@ -58,7 +59,9 @@
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(98, 139);
+            this.tbUsuario.AccessibleDescription = "";
+            this.tbUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.tbUsuario.Location = new System.Drawing.Point(86, 214);
             this.tbUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(149, 25);
@@ -68,52 +71,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 142);
+            this.label1.Location = new System.Drawing.Point(27, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.MaximumSize = new System.Drawing.Size(76, 82);
             this.label1.MinimumSize = new System.Drawing.Size(30, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Usuário:";
+            this.label1.Text = "Usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 180);
+            this.label2.Location = new System.Drawing.Point(27, 255);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.MaximumSize = new System.Drawing.Size(76, 82);
             this.label2.MinimumSize = new System.Drawing.Size(30, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 41;
-            this.label2.Text = "Senha:";
+            this.label2.Text = "Senha";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbErroLogin
+            // picDrawing
             // 
-            this.lbErroLogin.AutoSize = true;
-            this.lbErroLogin.Enabled = false;
-            this.lbErroLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbErroLogin.ForeColor = System.Drawing.Color.Red;
-            this.lbErroLogin.Location = new System.Drawing.Point(95, 211);
-            this.lbErroLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbErroLogin.MaximumSize = new System.Drawing.Size(148, 81);
-            this.lbErroLogin.MinimumSize = new System.Drawing.Size(148, 40);
-            this.lbErroLogin.Name = "lbErroLogin";
-            this.lbErroLogin.Size = new System.Drawing.Size(148, 40);
-            this.lbErroLogin.TabIndex = 42;
-            this.lbErroLogin.Text = "DADOS INCORRETOS";
-            this.lbErroLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbErroLogin.Visible = false;
+            this.picDrawing.Image = global::GestaoHorarios.Properties.Resources.unlock;
+            this.picDrawing.Location = new System.Drawing.Point(74, 61);
+            this.picDrawing.Name = "picDrawing";
+            this.picDrawing.Size = new System.Drawing.Size(128, 128);
+            this.picDrawing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDrawing.TabIndex = 42;
+            this.picDrawing.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 330);
-            this.Controls.Add(this.lbErroLogin);
+            this.ClientSize = new System.Drawing.Size(273, 351);
+            this.Controls.Add(this.picDrawing);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btLogin);
@@ -127,7 +123,8 @@
             this.Controls.SetChildIndex(this.btLogin, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.lbErroLogin, 0);
+            this.Controls.SetChildIndex(this.picDrawing, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.picDrawing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,6 +137,6 @@
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbErroLogin;
+        private System.Windows.Forms.PictureBox picDrawing;
     }
 }

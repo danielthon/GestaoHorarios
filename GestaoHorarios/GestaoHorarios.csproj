@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="clock.ico" />
+    <None Include="Resources\unlock.png" />
     <None Include="Resources\closeW.png" />
     <None Include="Resources\bg01.jpg" />
     <None Include="Resources\close.png" />
