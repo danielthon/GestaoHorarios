@@ -120,9 +120,7 @@ namespace GestaoHorarios.Telas
                     periodoSelecionado = v;
                     break;
                 }
-            }
-
-            List<Vertice> disciplinas = Manager.GetDisciplinasPorPeriodo(periodoSelecionado);
+            }  
 
             //limpa tuto
             
@@ -140,6 +138,8 @@ namespace GestaoHorarios.Telas
             }
 
             // carrega as disciplinas
+            List<Vertice> disciplinas = Manager.GetDisciplinasNaoAlocadasPorPeriodo(periodoSelecionado);
+
             foreach (Vertice v in disciplinas)
                 cbDisciplina.Items.Add(((Disciplina)v.GetDado).Nome);
 

@@ -79,12 +79,12 @@ namespace BLL
                 grade.AddAresta(new Aresta(vDisciplina, vProfessor));
             }
 
-            foreach(DataRow linha in horarios.Rows)
+            foreach (DataRow linha in horarios.Rows)
             {
                 // HORARIO
 
                 Horario h = new Horario(
-                    (DiaSemana)int.Parse(linha[3].ToString()), 
+                    (DiaSemana)int.Parse(linha[3].ToString()),
                     DateTime.Parse(linha[1].ToString()) == DateTime.Parse("19:00:00") ? Hora._19h00 : Hora._20h50);
 
                 Vertice vHorario = new Vertice(h);
@@ -93,7 +93,7 @@ namespace BLL
 
                 foreach (DataRow linhaAloc in alocacao.Rows)
                 {
-                    if(linhaAloc[2].ToString() == linha[0].ToString())
+                    if (linhaAloc[2].ToString() == linha[0].ToString())
                     {
                         Disciplina disc = new Disciplina(int.Parse(linhaAloc[1].ToString()));
 
@@ -122,14 +122,37 @@ namespace BLL
             return periodos;
         }
 
-        public static List<Vertice> GetDisciplinasPorPeriodo(Vertice periodo)
+        //public static List<Vertice> GetDisciplinasPorPeriodo(Vertice periodo)
+        //{
+        //    List<Vertice> disciplina = new List<Vertice>();
+
+        //    foreach (Vertice v in periodo.GetAdjacentes())
+        //    {
+        //        if (v.GetDado.GetType() == typeof(Disciplina))
+        //            disciplina.Add(v);
+        //    }
+
+        //    return disciplina;
+        //}
+
+        public static List<Vertice> GetDisciplinasNaoAlocadasPorPeriodo(Vertice periodo)
         {
             List<Vertice> disciplina = new List<Vertice>();
 
             foreach (Vertice v in periodo.GetAdjacentes())
             {
                 if (v.GetDado.GetType() == typeof(Disciplina))
-                    disciplina.Add(v);
+                {
+                    List<Vertice> adjacentes = v.GetAdjacentes();
+
+                    for (int i = 0; i < adjacentes.Count; i++)
+                    {
+                        if (adjacentes[i].GetDado.GetType() == typeof(Horario))
+                            break;
+                        else if (i == adjacentes.Count - 1)
+                            disciplina.Add(v);
+                    }
+                }
             }
 
             return disciplina;
@@ -148,9 +171,9 @@ namespace BLL
 
         public static Vertice GetDisciplinaAlocada(Vertice periodo, Vertice horario)
         {
-            foreach(Vertice v in horario.GetAdjacentes())
+            foreach (Vertice v in horario.GetAdjacentes())
             {
-                if(v.GetDado.GetType() == typeof(Disciplina))
+                if (v.GetDado.GetType() == typeof(Disciplina))
                 {
                     foreach (Vertice p in v.GetAdjacentes())
                     {
@@ -187,7 +210,7 @@ namespace BLL
             }
 
             return horarios;
-        } 
+        }
 
         public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina/*, out Alocacao alocacao*/)
         {
