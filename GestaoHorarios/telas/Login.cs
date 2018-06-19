@@ -19,6 +19,11 @@ namespace GestaoHorarios.Telas
         public Login()
         {
             InitializeComponent();
+
+            lb_titulo.Text = "Login no sistema";
+
+            tbUsuario.KeyDown += EnterClick;
+            tbSenhaUsuario.KeyDown += EnterClick;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -38,8 +43,6 @@ namespace GestaoHorarios.Telas
             }
 
             // FIM CONEXAO
-
-            lb_titulo.Text = "Login no sistema";
         }
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -66,6 +69,8 @@ namespace GestaoHorarios.Telas
                 {
                     if (prof.SenhaCorreta())
                     {
+                        Manager.UsuarioLogado = prof;
+
                         this.Hide();
 
                         Home h = new Home(prof);
@@ -80,13 +85,15 @@ namespace GestaoHorarios.Telas
 
                         tbSenhaUsuario.Focus();
                     }
-                       
+
                 }
             }
             else
             {
                 if (admin.SenhaCorreta())
                 {
+                    Manager.UsuarioLogado = admin;
+
                     this.Hide();
 
                     Home h = new Home(admin);
@@ -102,9 +109,10 @@ namespace GestaoHorarios.Telas
             }
         }
 
-        private void tbUsuario_TextChanged(object sender, EventArgs e)
+        public void EnterClick(object sender, KeyEventArgs e)
         {
-            //lbErroLogin.Visible = false;
+            if (e.KeyCode == Keys.Enter)
+                this.btLogin.PerformClick();
         }
     }
 }

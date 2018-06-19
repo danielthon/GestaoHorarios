@@ -29,6 +29,7 @@ namespace GestaoHorarios.Telas
             {
                 this.Text += " - Professor";
 
+                manutToolStrip.Text = "Consulta";
                 manutToolStrip.DropDownItems.Add("Horários").Click += new EventHandler((sender, e) => AbrirChildForm(sender, e, new ConsultaHorarios()));
 
                 AbrirChildForm(null, null, new ConsultaHorarios());

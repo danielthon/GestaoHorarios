@@ -66,7 +66,6 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(149, 25);
             this.tbUsuario.TabIndex = 37;
-            this.tbUsuario.TextChanged += new System.EventHandler(this.tbUsuario_TextChanged);
             // 
             // label1
             // 

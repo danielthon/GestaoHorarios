@@ -13,9 +13,10 @@ namespace BLL
 {
     public static class Manager
     {
-        public static Grafo grade = new Grafo();
+        private static Usuario logado;
+        private static Grafo grade = new Grafo();
 
-        public static Grafo Grade { get { return grade; } }
+        public static Usuario UsuarioLogado { get; set; }
 
         //public static void CarregarGrafoPeloArquivo(IDado[,] matriz)
         //{
@@ -155,14 +156,14 @@ namespace BLL
 
             //return null;
 
-            return Grade.GetVerticePorDado(dado);
+            return grade.GetVerticePorDado(dado);
         }
 
         public static List<Vertice> GetHorarios()
         {
             List<Vertice> horarios = new List<Vertice>();
 
-            foreach (Vertice v in Grade.Vertices)
+            foreach (Vertice v in grade.Vertices)
             {
                 if (v.GetDado.GetType() == typeof(Horario))
                     horarios.Add(v);
@@ -193,9 +194,9 @@ namespace BLL
                 //Vertice vProfessor = vDisciplina.GetAdjacentes()[0];
                 //Vertice vPeriodo = vDisciplina.GetAdjacentes()[1];
 
-                Grade.AddAresta(new Aresta(vHorario, vProfessor));
-                Grade.AddAresta(new Aresta(vHorario, vPeriodo));
-                Grade.AddAresta(new Aresta(vHorario, vDisciplina));
+                grade.AddAresta(new Aresta(vHorario, vProfessor));
+                grade.AddAresta(new Aresta(vHorario, vPeriodo));
+                grade.AddAresta(new Aresta(vHorario, vDisciplina));
 
                 alocacao = new Alocacao((Disciplina)vDisciplina.GetDado, (Horario)vHorario.GetDado);
 

@@ -62,11 +62,13 @@ namespace BLL.Arquivo
             int quantColunas = transfereDados[0].Split(caractereSeparador).Length;
             int quantLinhas = transfereDados.Length;
             string[] dadosLinha;
-            IDado[] vetorAux = new IDado[quantLinhas];
+            IDado[] vetorAux;
             Professor profAux = null;
 
             for (int i = 0; i < quantLinhas; i++)
             {
+                vetorAux = new IDado[quantLinhas];
+
                 dadosLinha = transfereDados[i].Split(caractereSeparador);
 
                 // PERIODO
@@ -90,12 +92,12 @@ namespace BLL.Arquivo
                 vetorAux[0] = (IDado)new Disciplina(dadosLinha[0], ((Professor)vetorAux[1]).ID, int.Parse(dadosLinha[2]));
                 ((Disciplina)vetorAux[0]).SalvarNoBanco();
 
-                for (int j = 0; j < int.Parse(dadosLinha[3]); j++) // qtdNaSemana
-                {
-                    matrizDados.Add(vetorAux);
-                }
+                //for (int j = 0; j < int.Parse(dadosLinha[3]); j++) // qtdNaSemana
+                //{
+                //    matrizDados.Add(vetorAux);
+                //}
 
-                vetorAux = new IDado[quantLinhas];
+                matrizDados.Add(vetorAux);
             }
         }
 

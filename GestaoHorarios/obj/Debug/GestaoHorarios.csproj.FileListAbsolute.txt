@@ -34,11 +34,9 @@ C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoH
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\BLL.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.dll
-C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\Google.Protobuf.dll
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\BLL.pdb
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\DAL.pdb
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\MySql.Data.xml
-C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\bin\Debug\Google.Protobuf.xml
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.csprojResolveAssemblyReference.cache
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Telas.FormBase.resources
 C:\Users\daniel.fonseca\Desktop\Projetos & Cursos\Pessoal\GestaoHorarios\GestaoHorarios\obj\Debug\GestaoHorarios.Properties.Resources.resources
