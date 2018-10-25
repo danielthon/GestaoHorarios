@@ -18,7 +18,7 @@ namespace BLL
 
         public static Usuario UsuarioLogado { get; set; }
 
-        //public static void CarregarGrafoPeloArquivo(IDado[,] matriz)
+        //public static void CarregarGrafoPeloArquivo(IDado[,] matriz) //teste
         //{
         //    for (int i = 0; i < matriz.GetLength(0); i++)
         //    {
