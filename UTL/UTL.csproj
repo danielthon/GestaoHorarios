@@ -50,8 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BLL\TestEntidades.cs" />
+    <Compile Include="DAL\TestConexão.cs" />
     <Compile Include="Excecoes\ErroConexaoException.cs" />
-    <Compile Include="BLL\ManagerTest.cs" />
+    <Compile Include="BLL\TestManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

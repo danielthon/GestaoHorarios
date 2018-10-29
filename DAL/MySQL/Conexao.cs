@@ -18,7 +18,7 @@ namespace DAL.MySQL
             str.Append("server=" + servidor); //padrão = "localhost"
             str.Append(";database=" + bd);
             str.Append(";uid=root");
-            str.Append(";Pwd=");
+            str.Append(";Pwd=fabritalo87");
 
             conn = new MySqlConnection(str.ToString());
 
