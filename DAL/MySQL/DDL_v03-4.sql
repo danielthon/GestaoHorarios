@@ -63,8 +63,8 @@ FOREIGN KEY(Id_Alocacao) REFERENCES Alocacao (Id)
 
 insert into usuario values (null, 'daniel', 'daniel', '1234');
 insert into usuario values (null, 'italo', 'italo', '1234');
-insert into usuario values (null, 'pedroh', 'pedroh', '1234');
-insert into usuario values (null, 'michelle', 'michelle', '1234');
+insert into usuario values (null, 'pedro', 'pedro', '1234');
+insert into usuario values (null, 'claudiney', 'claudiney', '1234');
 
 insert into administrador values (null, 1);
 insert into administrador values (null, 2);
