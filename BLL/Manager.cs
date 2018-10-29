@@ -243,6 +243,30 @@ namespace BLL
             }
         }
 
+        public static void Desalocar(Vertice vHorario, Vertice vDisciplina)
+        {
+            Alocacao alocacao = new Alocacao((Disciplina)vDisciplina.GetDado, (Horario)vHorario.GetDado);
+
+            Vertice vProfessor = null;
+            Vertice vPeriodo = null;
+
+            foreach (Vertice v in vDisciplina.GetAdjacentes())
+            {
+                if (v.GetDado.GetType() == typeof(Professor))
+                    vProfessor = v;
+                else
+                    vPeriodo = v;
+            }
+
+            foreach (Aresta a in vHorario.Arestas)
+            {
+                if (a.Contem(vProfessor) || a.Contem(vPeriodo) || a.Contem(vDisciplina))
+                    grade.RemoverAresta(a);
+            }
+
+            alocacao.RemoverDoBanco();
+        }
+
         public static bool AbrirConexao(out string mensagemErro)
         {
             return Conexao.SetConexao("localhost", "sga", out mensagemErro);

@@ -50,5 +50,13 @@ namespace BLL.Estruturas
         {
             this.arestas.AddRange(novas);
         }
+
+        public void RemoverAresta(Aresta aRemover)
+        {
+            aRemover.VerticePrimeiro.Arestas.Remove(aRemover);
+            aRemover.VerticeSegundo.Arestas.Remove(aRemover);
+
+            this.arestas.Remove(aRemover);
+        }
     }
 }
