@@ -54,6 +54,12 @@ namespace BLL.Entidades
                     };
 
                     tabelaA.Insert(valuesA);  // INSERIR ADMINISTRADOR
+
+                    if (!this.ExisteNoBanco())
+                    {
+                        tabelaU.Delete(this.id_usuario);
+                        throw new Exception("Dado não inserido no banco!");
+                    }
                 }
                 else
                 {
@@ -111,7 +117,7 @@ namespace BLL.Entidades
             }
         }
 
-        public override bool ExisteNoBanco()
+        public bool ExisteNoBanco()
         {
             string[] valoresChave =
             {
