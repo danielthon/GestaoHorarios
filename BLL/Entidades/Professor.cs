@@ -10,20 +10,17 @@ namespace BLL.Entidades
     {
         int id_prof;
 
-        //public override string ID { get { return this.id_prof == 0 ? "" : this.id_prof.ToString(); } set { this.id_prof = int.Parse(value); } }
         public override int ID { get { return this.id_prof; } }
-        //public string ID_Usuario { get { return this.id_usuario == 0 ? "" : this.id_usuario.ToString(); } set { this.id_usuario = int.Parse(value); } }
         public int ID_Usuario { get { return this.id_usuario; } }
 
         public Professor(string login, string senha) : base(login, senha)
         {
-            base.ExisteNoBanco();
             this.ExisteNoBanco(); //verifica se existe, se sim, seta o id
         }
 
         public Professor(string nome, string login, string senha) : base (nome, login, senha) { this.ExisteNoBanco(); } //verifica se existe, se sim, seta o id
 
-        public Professor(int id_prof, int id_usuario) : base(id_usuario) { /*if (this.ExisteNoBanco())*/ this.id_prof = id_prof; }
+        public Professor(int id_prof, int id_usuario) : base(id_usuario) { this.id_prof = id_prof; }
 
         public Professor(int id_usuario, int id_prof, string nome, string login, string senha) : base(id_usuario, nome, login, senha) { this.id_prof = id_prof; }
 
@@ -71,42 +68,54 @@ namespace BLL.Entidades
             TProfessor tabelaP = new TProfessor();
             string[] valuesP =
             {
-                this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                this.id_usuario.ToString()
             };
 
             if (this.id_usuario == 0) //nao possui id, então 'usuario' ainda nao foi inserido no banco
             {
                 if (!base.ExisteNoBanco()) //usuario
                 {
-                    tabelaU.Insert(valuesU);  // INSERIR
+                    tabelaU.Insert(valuesU);  // INSERIR USUARIO
 
-                    if (!base.ExisteNoBanco()) //usuario
+                    if (!base.ExisteNoBanco())
                         throw new Exception("Dado não inserido no banco!");
 
                     valuesP = new string[]
                     {
-                        this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
+                        this.id_usuario.ToString()
                     };
 
-                    tabelaP.Insert(valuesP);  // INSERIR
+                    tabelaP.Insert(valuesP);  // INSERIR PROFESSOR
 
-                    if (!this.ExisteNoBanco()) //usuario
+                    if (!this.ExisteNoBanco())
+                    {
+                        tabelaU.Delete(this.id_usuario);
                         throw new Exception("Dado não inserido no banco!");
+                    }
+                        
                 }
                 else
                 {
-                    tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR
-
-                    if (!this.ExisteNoBanco()) //administrador
+                    valuesP = new string[]
                     {
-                        valuesP = new string[]
-                        {
-                            this.id_usuario.ToString() //nao confunda: a variavel 'id' armazena o 'id_usuario'
-                        };
-                        tabelaP.Insert(valuesP);  // INSERIR
-                    }                                                 // *
+                        this.id_usuario.ToString()
+                    };
 
-                    if (!this.ExisteNoBanco()) //administrador
+                    // verificando se existe administrador:
+
+                    Administrador admin = new Administrador(this.login, this.senha);
+                    if (admin.ExisteNoBanco() && !this.ExisteNoBanco())
+                    {
+                        admin.RemoverDoBanco(); // REMOVER ADMINISTRADOR
+                        tabelaU.Insert(valuesU); // REINSERIR USUARIO
+                        tabelaP.Insert(valuesP); // INSERIR COMO PROFESSOR
+                    }
+                    else
+                    {
+                        tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR USUARIO
+                    }
+
+                    if (!this.ExisteNoBanco()) //professor
                         throw new Exception("Dado não inserido no banco!");
                 }
             }
@@ -116,10 +125,7 @@ namespace BLL.Entidades
                     throw new Exception("Banco com lógica corrompida! Usuário encontrado sem especialização (Admin. ou Prof.)");
 
                 tabelaU.Update(valuesU, this.id_usuario);  // ALTERAR
-                // *
             }
-
-            //* aqui haveria o tabelaA.Update, mas se ele ja existe, nao precisa de alterar porque Id_Usuario é a unica variavel
         }
 
         public override void RemoverDoBanco()
@@ -144,7 +150,7 @@ namespace BLL.Entidades
             }
         }
 
-        public override bool ExisteNoBanco()
+        public bool ExisteNoBanco()
         {
             string[] valoresChave =
             {
