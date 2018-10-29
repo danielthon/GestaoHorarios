@@ -15,9 +15,9 @@ namespace BLL.Entidades
 
         //public virtual string ID { get { return this.id_usuario == 0 ? "" : this.id_usuario.ToString(); } set { this.id_usuario = int.Parse(value); } }
         public virtual int ID { get { return this.id_usuario; } }
-        public string Nome { get { return this.nome; } }
-        public string Login { get { return this.login; } }
-        public string Senha { get { return this.senha; } }
+        public string Nome { get { return this.nome; } set { this.nome = value; } }
+        public string Login { get { return this.login; } set { this.login = value; } }
+        public string Senha { get { return this.senha; } set { this.senha = value; } }
 
         public Usuario(string nome, string login, string senha)
         {
