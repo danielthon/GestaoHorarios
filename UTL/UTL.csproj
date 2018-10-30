@@ -50,10 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BLL\TestEntidades.cs" />
-    <Compile Include="DAL\TestConexão.cs" />
+    <Compile Include="BLL\TestesIntegracao\TestEntidades.cs" />
+    <Compile Include="BLL\TestesUnitarios\TestManager.cs" />
+    <Compile Include="DAL\TestesUnitarios\TestConexao.cs" />
     <Compile Include="Excecoes\ErroConexaoException.cs" />
-    <Compile Include="BLL\TestManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +62,7 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
