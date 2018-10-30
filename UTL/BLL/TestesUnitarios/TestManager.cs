@@ -11,15 +11,15 @@ namespace UTL.BLL.TestesUnitarios
     [TestClass]
     public class TestManager
     {
-        public TestManager()
-        {
-            string errMsg;
-            Manager.AbrirConexao(out errMsg);
-            Manager.CarregarGrafoPeloBanco();
-        }
+        //public TestManager()
+        //{
+        //    string errMsg;
+        //    Manager.AbrirConexao(out errMsg);
+        //    Manager.CarregarGrafoPeloBanco();
+        //}
 
         [TestMethod]
-        public void TestTentarAlocar()
+        public void TentarAlocar()
         {
             Disciplina d = new Disciplina(0);
             Horario h = new Horario(DiaSemana.Quarta, Hora._20h50);
@@ -27,17 +27,13 @@ namespace UTL.BLL.TestesUnitarios
             Vertice vDisciplina = new Vertice(d);
             Vertice vHorario = new Vertice(h);
 
-            Assert.AreEqual(true, Manager.TentarAlocar(vHorario, vDisciplina), "OPSSS, O método retornou false");
+            Assert.AreEqual(true, Manager.TentarAlocar(vHorario, vDisciplina), "Erro nçao identificado!");
         }
-
-        //public static bool TentarAlocar(Vertice vHorario, Vertice vDisciplina/*, out Alocacao alocacao*/)
-
-
 
         private static Grafo grade = new Grafo();
 
         [TestMethod]
-        public void GETPeriodo()
+        public void GetPeriodo()
         {
 
             // linhas que coloquei para testar o método inicia aqui

@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Assemblies.cs" />
     <Compile Include="BLL\TestesIntegracao\TestEntidades.cs" />
     <Compile Include="BLL\TestesUnitarios\TestManager.cs" />
     <Compile Include="DAL\TestesUnitarios\TestConexao.cs" />
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{40dbf605-5ae7-4297-a7fa-ee189bd24b10}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{32bb151c-6a0b-4192-97c0-bbec42cd2682}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

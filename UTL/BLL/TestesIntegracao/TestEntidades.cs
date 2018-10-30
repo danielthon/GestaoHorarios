@@ -11,106 +11,78 @@ namespace UTL.DAL
     [TestClass]
     public class TestEntidades
     {
+        //[TestMethod]
+        //public void SalvarNoBancoAdministradorException()
+        //{
+        //    Administrador adm = new Administrador("AdmnidtradorTester", "1234");
 
+        //    try
+        //    {
+        //        adm.SalvarNoBanco();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        StringAssert.Contains(e.Message, "não inserido no banco");
+        //        StringAssert.Contains(e.Message, "lógica corrompida");
+        //    }
+        //    Assert.Fail("Nenhuma exceção foi alcançada.");
+        //}
 
-        [AssemblyInitialize]
-        public static void Inicializar(TestContext teste)
-        {
-            try
-            {
-                string msgErro;
+        //[TestMethod]
+        //public void SalvarNoBancoAlocacaoException()
+        //{
+        //    Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
+        //    Horario hor = new Horario(DiaSemana.Segunda, Hora._19h00);
 
-                Manager.AbrirConexao(out msgErro);
-            }
-            catch { }
-        }
+        //    Alocacao aloc = new Alocacao(discip, hor);
 
+        //    try
+        //    {
+        //        aloc.SalvarNoBanco();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        StringAssert.Contains(e.Message, "não inserido no banco");
+        //    }
+        //    Assert.Fail("Nenhuma exceção foi alcançada.");
+        //}
 
-        [TestMethod]
-        public  void TentarAlocar()
-        {
-            Disciplina d = new Disciplina("Filosofia_1", 0, 0);
-            Vertice vd = Manager.GetVerticeNaGrade(d);
-            Horario h = new Horario(DiaSemana.Quarta, Hora._20h50);
+        //[TestMethod]
+        //public void SalvarNoBancoDisciplinaException()
+        //{
+        //    Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
 
-            Vertice vDisciplina = new Vertice(d);
-            Vertice vHorario = new Vertice(h);
+        //    try
+        //    {
+        //        discip.SalvarNoBanco();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        StringAssert.Contains(e.Message, "não inserido no banco");
+        //    }
+        //    Assert.Fail("Nenhuma exceção foi alcançada.");
+        //}
 
-            Assert.AreEqual(true, Manager.TentarAlocar(vHorario, vDisciplina), "OPSSS, O método retornou false");
-        }
+        //[TestMethod]
+        //public void SalvarNoBancoProfessorException()
+        //{
+        //    Professor prof = new Professor("ProfessorTester", "1234");
 
-        [TestMethod]
-        public  void SalvarNoBancoAdministradorException()
-        {
-            Administrador adm = new Administrador("AdmnidtradorTester", "1234");
-
-            try
-            {
-                adm.SalvarNoBanco();
-            }
-            catch (Exception e)
-            {
-                StringAssert.Contains(e.Message, "não inserido no banco");
-                StringAssert.Contains(e.Message, "lógica corrompida");
-            }
-            Assert.Fail("Nenhuma exceção foi alcançada.");
-        }
-
-        [TestMethod]
-        public  void SalvarNoBancoAlocacaoException()
-        {
-            Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
-            Horario hor = new Horario(DiaSemana.Segunda, Hora._19h00);
-
-            Alocacao aloc = new Alocacao(discip, hor);
-
-            try
-            {
-                aloc.SalvarNoBanco();
-            }
-            catch (Exception e)
-            {
-                StringAssert.Contains(e.Message, "não inserido no banco");
-            }
-            Assert.Fail("Nenhuma exceção foi alcançada.");
-        }
-
-        [TestMethod]
-        public  void SalvarNoBancoDisciplinaException()
-        {
-            Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
-
-            try
-            {
-                discip.SalvarNoBanco();
-            }
-            catch (Exception e)
-            {
-                StringAssert.Contains(e.Message, "não inserido no banco");
-            }
-            Assert.Fail("Nenhuma exceção foi alcançada.");
-        }
+        //    try
+        //    {
+        //        prof.SalvarNoBanco();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        StringAssert.Contains(e.Message, "não inserido no banco");
+        //    }
+        //    Assert.Fail("Nenhuma exceção foi alcançada.");
+        //}
 
         [TestMethod]
-        public  void SalvarNoBancoProfessorException()
+        public void SalvarNoBancoAdministrador()
         {
-            Professor prof = new Professor("ProfessorTester", "1234");
-
-            try
-            {
-                prof.SalvarNoBanco();
-            }
-            catch (Exception e)
-            {
-                StringAssert.Contains(e.Message, "não inserido no banco");
-            }
-            Assert.Fail("Nenhuma exceção foi alcançada.");
-        }
-
-        [TestMethod]
-        public  void SalvarNoBancoAdministrador()
-        {
-            Administrador adm = new Administrador("AdmnidtradorTester", "1234");
+            Administrador adm = new Administrador("AdministradorTeste", "1234");
             string msgAcao;
 
             if (adm.ExisteNoBanco())
@@ -128,9 +100,9 @@ namespace UTL.DAL
         }
 
         [TestMethod]
-        public  void SalvarNoBancoAlocacao()
+        public void SalvarNoBancoAlocacao()
         {
-            Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
+            Disciplina discip = new Disciplina("DisciplinaTeste", 0, 0);
             Horario hor = new Horario(DiaSemana.Segunda, Hora._19h00);
 
             Alocacao aloc = new Alocacao(discip, hor);
@@ -139,20 +111,20 @@ namespace UTL.DAL
 
             if (aloc.ExisteNoBanco())
             {
-                msgAcao = "atualizado";
+                msgAcao = "atualizada";
             }
             else
             {
-                msgAcao = "inserido";
+                msgAcao = "inserida";
             }
 
             aloc.SalvarNoBanco();
 
-            Assert.AreEqual(true, aloc.ExisteNoBanco(), "O usuário não foi " + msgAcao + " corretamente no banco");
+            Assert.AreEqual(true, aloc.ExisteNoBanco(), "A alocação não foi " + msgAcao + " corretamente no banco");
         }
 
         [TestMethod]
-        public  void SalvarNoBancoDisciplina()
+        public void SalvarNoBancoDisciplina()
         {
             Disciplina discip = new Disciplina("DisciplinaTester", 0, 0);
 
@@ -173,7 +145,7 @@ namespace UTL.DAL
         }
 
         [TestMethod]
-        public  void SalvarNoBancoProfessor()
+        public void SalvarNoBancoProfessor()
         {
             Professor prof = new Professor("ProfessorTester", "1234");
 
