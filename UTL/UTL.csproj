@@ -36,6 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,10 +56,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Assemblies.cs" />
-    <Compile Include="BLL\TestesIntegracao\TestEntidades.cs" />
-    <Compile Include="BLL\TestesUnitarios\TestManager.cs" />
-    <Compile Include="DAL\TestesUnitarios\TestConexao.cs" />
+    <Compile Include="Controle\Controlador.cs" />
+    <Compile Include="TestesIntegracao\TestEntidades.cs" />
+    <Compile Include="TestesUnitarios\TestManager.cs" />
+    <Compile Include="TestesUnitarios\TestConexao.cs" />
     <Compile Include="Excecoes\ErroConexaoException.cs" />
+    <Compile Include="TestesSistema\TestAlocacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,7 +74,15 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controle\Drivers\Winium.Desktop.Driver.exe" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
