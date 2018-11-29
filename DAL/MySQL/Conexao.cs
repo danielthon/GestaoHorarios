@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 using MySql.Data.MySqlClient;
 using System.Data;
 
@@ -11,6 +10,8 @@ namespace DAL.MySQL
     {
         static private MySqlConnection conn;
         static private bool transacaoAberta = false;
+
+        public static MySqlConnection Conn { get => conn; set => conn = value; }
 
         public static bool SetConexao(string servidor, string bd, out string mensagem)
         {
@@ -101,6 +102,13 @@ namespace DAL.MySQL
                 return retorno[0][0].ToString();
             else
                 return null;
+        }
+
+        public static void DoScript()
+        {
+            //string command = MySQL.DDL
+            //MySqlCommand cmd = dbConn.CreateCommand();
+            //cmd.CommandText = DDL
         }
     }
 }

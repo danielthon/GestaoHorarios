@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BLL;
 using BLL.Entidades;
 using BLL.Estruturas;
+using DAL.MySQL;
 
 namespace UTL.TestesIntegracao
 {
@@ -36,8 +37,8 @@ namespace UTL.TestesIntegracao
 
             aloc = new Alocacao(discipAloc, horAloc);
 
-
             testContext.WriteLine(msgErro);
+
             // método executado automaticamente antes de iniciar os testes dessa classe
 
             // suba o banco com o ambiente preparado e defina a conexão aqui
@@ -84,7 +85,7 @@ namespace UTL.TestesIntegracao
         {
             adm.RemoverDoBanco();
 
-            Assert.AreEqual(true, adm.ExisteNoBanco() == false, "O usuário não foi removido corretamente no banco");
+            Assert.AreEqual(false, adm.ExisteNoBanco(), "O usuário não foi removido corretamente no banco");
         }
 
         /// <summary>
@@ -118,9 +119,9 @@ namespace UTL.TestesIntegracao
         [TestProperty("Description", "Tentar remover um professor na tabela \"Professor\".")]
         public void TI_PR_003()
         {
-            prof.SalvarNoBanco();
+            prof.RemoverDoBanco();
 
-            Assert.AreEqual(true, prof.ExisteNoBanco(), "O usuário não foi removido corretamente no banco");
+            Assert.AreEqual(false, prof.ExisteNoBanco(), "O usuário não foi removido corretamente no banco");
         }
 
         /// <summary>
@@ -156,7 +157,7 @@ namespace UTL.TestesIntegracao
         {
             discip.RemoverDoBanco();
 
-            Assert.AreEqual(true, discip.ExisteNoBanco(), "A disciplina não foi removida corretamente no banco");
+            Assert.AreEqual(false, discip.ExisteNoBanco(), "A disciplina não foi removida corretamente no banco");
         }
 
         /// <summary>
@@ -200,9 +201,9 @@ namespace UTL.TestesIntegracao
 
             Alocacao aloc = new Alocacao(discip, hor);
 
-            aloc.SalvarNoBanco();
+            aloc.RemoverDoBanco();
 
-            Assert.AreEqual(true, aloc.ExisteNoBanco(), "A alocação não foi removida corretamente no banco");
+            Assert.AreEqual(false, aloc.ExisteNoBanco(), "A alocação não foi removida corretamente no banco");
         }
     }
 }
