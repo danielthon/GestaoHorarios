@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="Assemblies.cs" />
     <Compile Include="Controle\Controlador.cs" />
+    <Compile Include="Controle\Mapping\FLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FLogin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controle\Utils.cs" />
     <Compile Include="TestesIntegracao\TestEntidades.cs" />
     <Compile Include="TestesUnitarios\TestManager.cs" />
     <Compile Include="TestesUnitarios\TestConexao.cs" />
@@ -82,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controle\Drivers\Winium.Desktop.Driver.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controle\Mapping\FLogin.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FLogin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

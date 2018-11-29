@@ -4,17 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UTL.Controle;
+using UTL.Controle.Mapping;
+using OpenQA.Selenium;
+using System.Threading;
 
 namespace UTL.TestesSistema
 {
-    class TestAlocacao
+    [TestClass]
+    public class TestAlocacao
     {
+        [ClassInitialize]
+        public static void Init(TestContext tc)
+        {
+            Controlador.AbrirDriver(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\GestaoHorarios\bin\Release\GestaoHorarios.exe");
+            Thread.Sleep(10000);
+
+            Utils.Digitar(By.Id(FLogin.Usuario_Textbox_Id), "automacao");
+            Utils.Digitar(By.Id(FLogin.Senha_Textbox_Id), "automacao");
+
+            Utils.Clicar(By.Id(FLogin.Usuario_Textbox_Id));
+        }
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            Controlador.FecharDriver();
+        }
+
         /// <summary>
         /// Alocar
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Alocar")]
-        private void TS_AL_001()
+        public void TS_AL_001()
         {
 
         }
@@ -24,7 +47,7 @@ namespace UTL.TestesSistema
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Alterar alocação")]
-        private void TS_AL_002()
+        public void TS_AL_002()
         {
 
         }
@@ -34,7 +57,7 @@ namespace UTL.TestesSistema
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Tentar alterar alocação para disciplina de outro período (nao encontrar)")]
-        private void TS_AL_003()
+        public void TS_AL_003()
         {
 
         }
@@ -44,7 +67,7 @@ namespace UTL.TestesSistema
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Tentar alterar alocação para disciplina já alocada (não encontrar)")]
-        private void TS_AL_004()
+        public void TS_AL_004()
         {
 
         }
@@ -54,7 +77,7 @@ namespace UTL.TestesSistema
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Remover alocação")]
-        private void TS_AL_005()
+        public void TS_AL_005()
         {
 
         }
@@ -64,7 +87,7 @@ namespace UTL.TestesSistema
         /// </summary>
         [TestMethod]
         [TestProperty("Description", "Tentar alocar um professor no mesmo horário em períodos diferentes (alerta de erro)")]
-        private void TS_AL_006()
+        public void TS_AL_006()
         {
 
         }

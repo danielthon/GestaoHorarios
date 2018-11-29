@@ -13,6 +13,8 @@ namespace BLL
 {
     public static class Manager
     {
+        public static bool testing = false;
+
         private static Usuario logado;
         private static Grafo grade = new Grafo();
 
@@ -269,7 +271,10 @@ namespace BLL
 
         public static bool AbrirConexao(out string mensagemErro)
         {
-            return Conexao.SetConexao("localhost", "sga", out mensagemErro);
+            if(!testing)
+                return Conexao.SetConexao("localhost", "sga", out mensagemErro);
+            else
+                return Conexao.SetConexao("localhost", "sga_SystemTests", out mensagemErro);
         }
     }
 }

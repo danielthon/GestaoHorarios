@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BLL;
 using DAL;
+using UTL.Controle;
 
 namespace UTL
 {
     [TestClass]
-    class Assemblies
+    public class Assemblies
     {
         [AssemblyInitialize]
         public static void Inicializar(TestContext teste)
         {
             string msgErro;
             Manager.AbrirConexao(out msgErro);
-
-
         }
 
         [AssemblyCleanup]
