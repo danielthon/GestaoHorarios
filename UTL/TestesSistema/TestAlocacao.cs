@@ -41,7 +41,31 @@ namespace UTL.TestesSistema
         [TestProperty("Description", "Alocar")]
         public void TS_AL_001()
         {
+            try
+            {
+                Utils.Clicar(By.Name(FHome.Menu_Manutencao_Name));
+                Utils.Clicar(By.Name(FHome.MenuItem_AlocacaoHorarios_Name));
 
+                Utils.Clicar(By.Id(FManutencaoHorarios.ComboBox_Periodo_Id));
+                Utils.Clicar(By.Name("1"));
+
+                Utils.Clicar(By.Id(FManutencaoHorarios.Label_Terca1_Id));
+                Utils.Clicar(By.Id(FManutencaoHorarios.ComboBox_Disciplina_Id));
+                Utils.Clicar(By.Name("ATP"));
+
+                Utils.Clicar(By.Id(FManutencaoHorarios.Botao_Gravar_Id));
+                Utils.Clicar(By.Name("Sim"));
+
+                // VERIFICAÇÃO
+
+                Utils.VerificarMessageBox("Alocação gravada!");
+
+                Utils.VerificarCampoTexto(By.Id(FManutencaoHorarios.Label_Terca1_Id), "ATP");
+            }
+            catch
+            {
+                Cleanup();
+            }
         }
 
         /// <summary>

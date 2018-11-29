@@ -19,6 +19,10 @@ namespace UTL.Controle
 
         public static void AbrirDriver(string caminhoAplicacao)
         {
+            Process[] processos = Process.GetProcessesByName("Winium.Desktop.Driver");
+
+            foreach (Process p in processos)
+                p.Kill();
 
             ProcessStartInfo info = new ProcessStartInfo();
 

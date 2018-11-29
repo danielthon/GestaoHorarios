@@ -57,6 +57,16 @@
   <ItemGroup>
     <Compile Include="Assemblies.cs" />
     <Compile Include="Controle\Controlador.cs" />
+    <Compile Include="Controle\Mapping\FManutencaoHorarios.Designer.cs">
+      <DependentUpon>FManutencaoHorarios.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Controle\Mapping\FHome.Designer.cs">
+      <DependentUpon>FHome.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Controle\Mapping\FLogin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +100,14 @@
     <Content Include="Controle\Drivers\sga_systemtests.sql" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controle\Mapping\FManutencaoHorarios.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FManutencaoHorarios.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle\Mapping\FHome.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FHome.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controle\Mapping\FLogin.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FLogin.Designer.cs</LastGenOutput>
