@@ -19,6 +19,10 @@
 -- Table structure for table `administrador`
 --
 
+DROP DATABASE IF EXISTS SGA_SYSTEMTESTS;
+CREATE DATABASE SGA_SYSTEMTESTS;
+USE SGA_SYSTEMTESTS;
+
 DROP TABLE IF EXISTS `administrador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
