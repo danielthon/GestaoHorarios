@@ -61,7 +61,7 @@ namespace UTL.Controle.Mapping {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to btEntrar.
+        ///   Looks up a localized string similar to btLogin.
         /// </summary>
         internal static string Entrar_Botao_Id {
             get {

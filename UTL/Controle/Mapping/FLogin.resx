@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Entrar_Botao_Id" xml:space="preserve">
-    <value>btEntrar</value>
+    <value>btLogin</value>
   </data>
   <data name="Senha_Textbox_Id" xml:space="preserve">
     <value>tbSenhaUsuario</value>

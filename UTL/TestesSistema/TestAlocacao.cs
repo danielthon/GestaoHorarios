@@ -20,10 +20,12 @@ namespace UTL.TestesSistema
             Controlador.AbrirDriver(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\GestaoHorarios\bin\Release\GestaoHorarios.exe");
             Thread.Sleep(10000);
 
+            //Utils.Esperar(By.Id(FLogin.Usuario_Textbox_Id));
+
             Utils.Digitar(By.Id(FLogin.Usuario_Textbox_Id), "automacao");
             Utils.Digitar(By.Id(FLogin.Senha_Textbox_Id), "automacao");
 
-            Utils.Clicar(By.Id(FLogin.Usuario_Textbox_Id));
+            Utils.Clicar(By.Id(FLogin.Entrar_Botao_Id));
         }
 
         [ClassCleanup]

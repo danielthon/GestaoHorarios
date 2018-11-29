@@ -4,7 +4,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BLL;
 using BLL.Entidades;
 using BLL.Estruturas;
-using UTL.Excecoes;
 
 namespace UTL.TestesUnitarios
 {
